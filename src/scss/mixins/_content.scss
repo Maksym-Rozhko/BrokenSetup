@@ -1,0 +1,239 @@
+@use "mini";
+@use "breakpoint";
+
+@mixin btn-main {
+    @include mini.flex-all-center;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #9278ff 0%, #4b28b1 100%);
+    border-radius: 40px;
+    transition: all ease-in-out .4s;
+    padding: 13px 30px;
+    max-width: fit-content;
+    width: 100%;
+    min-height: 60px;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(135deg, #7156e1 0%, #281461 100%);
+    }
+}
+
+@mixin btn-icon {
+    justify-content: space-between;
+    background: var(--cs-white);
+    color: var(--cs-text);
+    border-radius: 80px;
+    min-width: 280px;
+    padding-block: 10px;
+    padding-left: 24px;
+    padding-right: 10px;
+
+    .icon {
+        @include mini.flex-all-center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #9278ff 0%, #4b28b1 100%);
+        transition: all ease-in-out .4s;
+    }
+
+    &:hover {
+        background: var(--cs-white);
+        color: var(--cs-brand-main);
+
+        .icon {
+            background: linear-gradient(135deg, #7156e1 0%, #281461 100%);
+        }
+    }
+}
+
+@mixin form {
+    &-group {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 144%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--cs-text);
+        margin-bottom: 12px;
+    }
+
+    &__input {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        color: var(--cs-text);
+        padding: 17px 24px;
+        border-radius: 40px;
+        width: 100%;
+        background-color: var(--cs-white);
+        border: 2px solid var(--cs-bg-light-4);
+        outline: none;
+        caret-color: var(--cs-brand-main);
+        transition: all ease-in-out .4s;
+
+        &::placeholder {
+            opacity: .4;
+        }
+
+        &:focus {
+            border-color: var(--cs-brand-main);
+        }
+
+        &:focus:invalid {
+            border-color: var(--cs-error);
+        }
+
+        &:valid:not(:placeholder-shown) {
+            background-color: var(--cs-bg-light-2);
+        }
+
+        &:disabled {
+            background-color: var(--cs-bg-light-3);
+        }
+    }
+
+    textarea {
+        resize: none;
+        min-height: 160px;
+        padding: 18px 24px;
+    }
+
+    .btn-main {
+        @include btn-main;
+        position: relative;
+        overflow: hidden;
+        margin-top: 40px;
+        max-width: inherit;
+        font-size: 18px;
+    }
+}
+
+@mixin label {
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--cs-brand-main);
+}
+
+@mixin title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 150%;
+    letter-spacing: -0.03em;
+    text-transform: capitalize;
+    color: var(--cs-text-3);
+    text-align: center;
+}
+
+@mixin text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--cs-text-4);
+}
+
+@mixin socials {
+    @include mini.flex-all-sb;
+    gap: 50px;
+    max-width: 390px;
+    margin: 0 auto;
+
+    &__link {
+        .icon {
+            display: block;
+            width: 60px;
+            height: 60px;
+            fill: #8F4DED;
+            transition: all ease-in-out .4s;
+        }
+
+        &:hover {
+            .icon {
+                fill: #6B2AC8;
+            }
+        }
+    }
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-label {
+    @include label;
+}
+
+.section-title {
+    @include title;
+}
+
+.section-text {
+    @include text;
+}
+
+@media (max-width: 1920px) {
+    .section-title {
+        font-size: 40px;
+    }
+}
+
+@include breakpoint.big-desktop {
+    .section-label {
+        font-size: 21px
+    }
+}
+
+@include breakpoint.small-desktop {
+    .section-label {
+        font-size: 18px
+    }
+
+    .section-title {
+        font-size: 36px
+    }
+
+    .section-text {
+        font-size: 18px;
+    }
+}
+
+@include breakpoint.small-tablet {
+    .section-title {
+        font-size: 28px
+    }
+
+    .section-text {
+        font-size: 16px;
+    }
+}
+
+@include breakpoint.mobile {
+    .section-label {
+        font-size: 16px
+    }
+
+    .section-title {
+        font-size: 26px
+    }
+}

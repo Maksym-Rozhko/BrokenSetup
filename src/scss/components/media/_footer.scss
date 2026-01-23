@@ -1,0 +1,121 @@
+@use "../../mixins/breakpoint";
+
+@media (max-width: 1920px) {
+    .scroll-top {
+        width: 88px;
+        height: 88px;
+        bottom: 100px;
+    }
+}
+
+@include breakpoint.big-desktop {
+    .scroll-top {
+        width: 70px;
+        height: 70px;
+        right: 30px;
+
+        .icon {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .scroll-top {
+        bottom: 110px;
+    }
+}
+
+@include breakpoint.tablet {
+    .footer {
+        &__container {
+            padding-block: 40px;
+        }
+        .nav {
+            ul {
+                li {
+                    text-align: center;
+
+                    a {
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            font-size: 21px;
+            white-space: nowrap;
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .footer {
+        &__container {
+            flex-direction: column;
+            padding-bottom: 30px;
+            gap: 12px;
+        }
+
+        .copyright {
+            font-size: 18px;
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .footer {
+        padding-top: 20px;
+        padding-bottom: 16px;
+        border-top: 2px solid rgba(90 104 129 / .2);
+
+        &__container {
+            padding-block: 0;
+            border-top: 0;
+            gap: 14px;
+        }
+
+        .nav {
+            ul {
+                li {
+                    &:not(:last-child) {
+                        padding-right: 14px;
+                        margin-right: 14px;
+
+                        &::after {
+                            width: 2px;
+                            height: 14px;
+                        }
+                    }
+
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            font-size: 12px;
+        }
+    }
+    .scroll-top {
+        bottom: 100px;
+    }
+}
+
+@media (max-width: 428px) {
+    .scroll-top {
+        right: 10px;
+        bottom: 100px;
+        width: 50px;
+        height: 50px;
+
+        .icon {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

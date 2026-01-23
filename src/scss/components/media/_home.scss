@@ -1,0 +1,1068 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .main-screen {
+        background-position: bottom right -200px;
+
+        &__container {
+            max-width: 680px;
+        }
+
+        .title {
+            font-size: 60px;
+        }
+
+        .text {
+            font-size: 24px;
+            margin-top: 24px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .how-works {
+        padding-block: 160px;
+
+        .section-title {
+            margin-block: 16px;
+        }
+
+        .section-text {
+            margin-bottom: 40px;
+        }
+
+        &__container {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        &-info {
+            gap: 40px;
+
+            h3 {
+                font-size: 24px;
+            }
+
+            ul {
+                li {
+                    font-size: 18px;
+
+                    span {
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        padding-block: 160px;
+
+        .section-title {
+            margin-top: 16px;
+            margin-bottom: 40px;
+        }
+
+        .service {
+            img {
+                max-width: 480px;
+                max-height: 480px;
+            }
+
+            h3 {
+                margin-block: 40px;
+                font-size: 24px;
+            }
+
+            ul {
+                li {
+                    font-size: 18px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+
+                    span {
+                        font-size: 21px;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tips {
+        padding-block: 160px;
+
+        .section-title {
+            margin-top: 16px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .ready {
+        padding-top: 188px;
+        padding-bottom: 188px;
+
+        .title {
+            max-width: 1000px;
+        }
+    }
+
+    .above-footer {
+        .logo-group {
+            max-width: 480px;
+
+            .contact-link {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .item-menu {
+            max-width: 1000px;
+
+            .nav > ul {
+                & > li {
+                    ul {
+                        li {
+                            &:not(:last-child) {
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        a {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1728px) {
+    .stats {
+        padding-block: 168px;
+
+        .title {
+            font-size: 60px;
+        }
+
+        &__list {
+            gap: 40px;
+            max-width: 480px;
+
+            div {
+                font-size: 60px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+    .how-works {
+        &__container {
+            padding-bottom: 30px;
+        }
+
+        &-info {
+            gap: 32px;
+
+            ul {
+                gap: 20px 40px;
+
+                li {
+                    padding-left: 54px;
+                }
+            }
+        }
+    }
+    .services {
+        &__container {
+            gap: 32px;
+        }
+
+        .service {
+            img {
+                max-width: 448px;
+                max-height: 448px;
+            }
+
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 31px;
+                    }
+
+                    span {
+                        margin-bottom: 21px;
+                    }
+                }
+            }
+        }
+    }
+
+    .above-footer {
+        .logo-link {
+            margin-bottom: 65px;
+
+            .logo {
+                min-width: 248px;
+            }
+        }
+
+        &__container {
+            gap: 32px;
+        }
+
+        .logo-group {
+            max-width: 448px;
+
+            .link {
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
+
+            .contact-link {
+                font-size: 18px;
+            }
+        }
+
+        .item-menu {
+            max-width: 930px;
+
+            .nav > ul {
+                gap: 32px;
+
+                & > li {
+                    & > a {
+                        font-size: 24px;
+                    }
+
+                    ul {
+                        a {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .main-screen {
+        background-position: bottom right -200px;
+        min-height: 840px;
+
+        &__container {
+            max-width: 570px;
+        }
+
+        .title {
+            font-size: 40px;
+        }
+
+        .text {
+            font-size: 21px;
+            letter-spacing: -0.02em;
+        }
+
+        .btn-main {
+            font-size: 18px;
+        }
+    }
+
+    .stats {
+        padding-block: 174px;
+
+        .title {
+            font-size: 60px;
+        }
+
+        &__list {
+            max-width: 400px;
+
+            div + span {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .how-works {
+        padding-block: 120px;
+
+        .section-title {
+            margin-block: 16px;
+        }
+
+        .section-text {
+            margin-bottom: 40px;
+        }
+
+        &-info {
+            grid-template-columns: 1.9fr 4.1fr;
+            gap: 24px;
+
+            h3 {
+                font-size: 21px;
+            }
+
+            ul {
+                gap: 20px 25px;
+
+                li {
+                    font-size: 16px;
+
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        padding-block: 120px;
+
+        &__container {
+            gap: 24px;
+        }
+
+        .service {
+            img {
+                max-width: 384px;
+                max-height: 384px;
+            }
+
+            h3 {
+                margin-bottom: 24px;
+                font-size: 21px;
+            }
+
+            ul {
+                li {
+                    font-size: 16px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+
+                    span {
+                        font-size: 18px;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tips {
+        padding-block: 120px;
+
+        .tricks {
+            max-width: 856px;
+
+            &__item:not(:last-child) {
+                margin-bottom: 16px;
+            }
+
+            &__title {
+                font-size: 21px;
+            }
+
+            &__answer {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .ready {
+        padding-top: 158px;
+        padding-bottom: 158px;
+
+        .title {
+            font-size: 64px;
+            max-width: 663px;
+        }
+
+        &__wrap {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            p {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .above-footer {
+        .logo-link {
+            margin-bottom: 40px;
+        }
+
+        &__container {
+            gap: 24px;
+        }
+
+        .logo-group {
+            max-width: 384px;
+        }
+
+        .item-menu {
+            max-width: 792px;
+
+            .nav > ul {
+                gap: 24px;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .main-screen {
+        background-position: bottom right -300px;
+        min-height: 740px;
+    }
+
+    .stats {
+        padding-block: 132px;
+    }
+
+    .how-works {
+        padding-top: 100px;
+        padding-bottom: 64px;
+
+        .section-text {
+            max-width: 570px;
+            margin-bottom: 45px;
+        }
+
+        &-info {
+            &:not(:first-child) {
+                padding-top: 40px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            ul {
+                li {
+                    span {
+                        font-size: 16px;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        padding-block: 100px;
+
+        .service {
+            img {
+                max-width: 357px;
+                max-height: 357px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            ul {
+                li {
+                    span {
+                        font-size: 16px;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tips {
+        padding-block: 100px;
+
+        .tricks {
+            max-width: 680px;
+
+            &__title {
+                font-size: 18px;
+            }
+
+            &__answer {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .ready {
+        padding-top: 130px;
+        padding-bottom: 130px;
+
+        &__container {
+            justify-content: space-between;
+        }
+
+        &__wrap {
+            p {
+                font-size: 24px;
+                max-width: 270px;
+            }
+        }
+    }
+
+    .above-footer {
+        padding-top: 93px;
+
+        .logo-group {
+            max-width: 357px;
+        }
+
+        .item-menu {
+            max-width: 738px;
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .main-screen {
+        display: block;
+        background-image: url('../images/home/main-screen/mobile.png');
+        background-position: bottom center;
+        background-size: auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        min-height: 1040px;
+
+        &__container {
+            max-width: inherit
+        }
+
+        &__left {
+            @include mini.flex-all-center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .title {
+            max-width: 550px;
+        }
+
+        .text {
+            max-width: 680px;
+        }
+    }
+
+    .stats {
+        padding-block: 74px;
+
+        .title {
+            width: 100%;
+        }
+
+        &__list {
+            width: 100%;
+        }
+    }
+
+    .how-works {
+        padding-bottom: 67px;
+
+        .section-title {
+            margin-block: 10px;
+        }
+
+        .section-text {
+            margin-bottom: 40px;
+        }
+
+        &-info {
+            gap: 16px;
+
+            ul {
+                gap: 20px;
+
+                li {
+                    padding-left: 40px;
+
+                    &::before {
+                        width: 28px;
+                        height: 28px;
+                        background-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        padding-bottom: 77px;
+
+        .section-title {
+            margin-top: 10px;
+        }
+
+        &__container {
+            gap: 16px;
+        }
+
+        .service {
+            img {
+                max-width: 288px;
+                max-height: 288px;
+            }
+
+            h3 {
+                margin-top: 24px;
+            }
+
+            ul {
+                li {
+                    padding-left: 40px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+
+                    &::before {
+                        width: 28px;
+                        height: 28px;
+                        background-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tips {
+        .section-title {
+            margin-top: 10px;
+        }
+    }
+
+    .ready {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .title {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        &__wrap {
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 18px;
+                max-width: inherit;
+            }
+        }
+    }
+
+    .above-footer {
+        padding-block: 80px;
+
+        .logo-link {
+            margin-bottom: 53px;
+        }
+
+        &__container {
+            gap: 16px;
+        }
+
+        .logo-group {
+            max-width: 288px;
+
+            .link {
+                font-size: 21px;
+            }
+        }
+
+        .item-menu {
+            max-width: 592px;
+
+            .nav > ul {
+                gap: 16px;
+
+                & > li {
+                    & > a {
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .main-screen {
+        .title {
+            font-size: 36px;
+        }
+
+        .text {
+            font-size: 18px;
+            max-width: 529px;
+        }
+    }
+
+    .stats {
+        padding-block: 70px;
+
+        .title {
+            font-size: 40px;
+        }
+
+        &__list {
+            gap: 20px;
+            max-width: 300px;
+
+            div {
+                font-size: 40px;
+                margin-bottom: 2px;
+            }
+
+            div + span {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .how-works {
+        padding-top: 80px;
+        padding-bottom: 60px;
+
+        .section-text {
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        &__container {
+            margin-top: 30px;
+            overflow-x: auto;
+            margin-right: -20px;
+            padding-right: 20px;
+        }
+
+        &-info {
+            min-width: 880px;
+        }
+    }
+
+    .services {
+        padding-block: 60px;
+
+        &__container {
+            gap: 16px;
+            overflow-x: auto;
+            margin-right: -20px;
+            padding-right: 20px;
+        }
+
+        .service {
+            min-width: 288px;
+
+            h3 {
+                margin-top: 40px;
+            }
+
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tips {
+        padding-block: 60px;
+
+        .section-title {
+            margin-bottom: 45px;
+        }
+
+        .tricks {
+            max-width: inherit;
+
+            &__title {
+                font-size: 16px;
+            }
+
+            &__item.tricks__item--active {
+                .tricks__answer {
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }
+
+    .above-footer {
+        padding-block: 60px;
+
+        .logo-link {
+            margin-bottom: 0;
+
+            .logo {
+                max-width: 248px;
+            }
+        }
+
+        &__container {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .logo-group {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+            max-width: inherit;
+
+            .contact-group {
+                max-width: 332px;
+                width: 100%;
+            }
+
+            .link {
+                font-size: 21px;
+                margin-bottom: 24px;
+            }
+
+            .contact-link {
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        .item-menu {
+            max-width: 680px;
+
+            .nav > ul {
+                & > li {
+                    & > a {
+                        margin-bottom: 30px;
+                    }
+
+                    ul {
+                        li {
+                            &:not(:last-child) {
+                                margin-bottom: 16px;
+                            }
+                        }
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .main-screen {
+        min-height: 720px;
+        background-size: 602px 300px;
+    }
+
+    .stats {
+        padding-block: 60px;
+
+        &__container {
+            overflow-x: auto;
+            margin-right: -20px;
+        }
+
+        .title {
+            font-size: 28px;
+        }
+
+        &__list {
+            gap: 16px;
+            max-width: 260px;
+            min-width: 260px;
+
+            div {
+                font-size: 28px;
+                margin-bottom: 12px;
+            }
+
+            div + span {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .how-works {
+        padding-top: 60px;
+
+        .section-text {
+            margin-bottom: 24px;
+        }
+
+        &__container {
+            margin-top: 24px;
+            margin-bottom: 30px;
+            margin-right: 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        &-info {
+            min-width: inherit;
+            grid-template-columns: 1fr;
+
+            &:not(:first-child) {
+                padding-top: 32px;
+            }
+
+            h3 {
+                margin-bottom: 30px;
+            }
+
+            ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    .services {
+        .service {
+            h3 {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .tips {
+        .section-title {
+            margin-bottom: 30px;
+        }
+
+        .tricks {
+            &__question {
+                padding-block: 16px;
+                position: relative;
+            }
+
+            &__title {
+                max-width: 226px;
+                position: static;
+
+                &::before,
+                &::after {
+                    right: 28px;
+                }
+            }
+        }
+    }
+
+    .ready {
+        padding-bottom: 70px;
+
+        .title {
+            font-size: 30px;
+        }
+
+        &__wrap {
+            p {
+                max-width: 200px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+        }
+    }
+
+    .above-footer {
+        .logo-link {
+            .logo {
+                max-width: 145px;
+                min-width: 145px;
+            }
+        }
+
+        .logo-group {
+            justify-content: flex-start;
+            gap: 42px;
+
+            .contact-group {
+                max-width: 175px;
+            }
+
+            .link {
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+
+            .contact-link {
+                font-size: 12px;
+
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        .item-menu {
+            max-width: 362px;
+
+            .nav > ul {
+                gap: 12px;
+
+                & > li {
+                    & > a {
+                        font-size: 16px;
+                        margin-bottom: 16px;
+                    }
+
+                    ul {
+                        a {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 402px) {
+    .main-screen {
+        padding-top: 60px;
+        min-height: 620px;
+
+        .title {
+            font-size: 30px;
+        }
+
+        .text {
+            font-size: 16px;
+            margin-top: 12px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .above-footer {
+        .logo-group {
+            justify-content: space-between;
+            gap: 12px;
+        }
+    }
+}

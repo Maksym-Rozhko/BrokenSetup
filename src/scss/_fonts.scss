@@ -1,0 +1,6 @@
+@use "mixins/font-face";
+
+@include font-face.font-face("Plus Jakarta Sans", "../fonts/PlusJakartaSans-Regular", 400, normal);
+@include font-face.font-face("Plus Jakarta Sans", "../fonts/PlusJakartaSans-Medium", 500, medium);
+@include font-face.font-face("Plus Jakarta Sans", "../fonts/PlusJakartaSans-SemiBold", 600, bold);
+@include font-face.font-face("Plus Jakarta Sans", "../fonts/PlusJakartaSans-SemiBold", 700, medium);

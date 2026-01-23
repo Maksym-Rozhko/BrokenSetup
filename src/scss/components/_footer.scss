@@ -1,0 +1,95 @@
+@use "../mixins/mini";
+@use "../mixins/modal";
+
+.footer {
+    background-color: var(--cs-bg-light-3);
+
+    &__container {
+        @include mini.flex-all-sb;
+        gap: 10px;
+        padding-block: 53px;
+        border-top: 2px solid rgba(90 104 129 / .2);
+    }
+
+    .nav {
+        ul {
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            list-style: none;
+            @include mini.flex-all-sb;
+
+            li {
+                position: relative;
+
+                &:not(:last-child) {
+                    padding-right: 36px;
+                    margin-right: 36px;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 2px;
+                        height: 28px;
+                        background-color: var(--cs-terms-link);
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                a {
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 150%;
+                    letter-spacing: -0.02em;
+                    color: var(--cs-terms-link);
+                    transition: all ease-in-out .4s;
+
+                    &:hover {
+                        color: var(--cs-brand-main);
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: var(--cs-text-4);
+    }
+}
+
+.scroll-top {
+    width: 98px;
+    height: 98px;
+    background: linear-gradient(135deg, #9278ff 0%, #4b28b1 100%);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    position: fixed;
+    z-index: 11;
+    bottom: 125px;
+    right: 60px;
+    @include mini.flex-all-center;
+    cursor: pointer;
+    transition: all ease-in-out .4s;
+
+    .icon {
+        width: 36px;
+        height: 36px;
+        transform: rotate(-90deg);
+    }
+
+    &:hover {
+        background: linear-gradient(135deg, #7156e1 0%, #281461 100%);
+    }
+}
+
+.graph-modal {
+    &__container {
+        @include modal.modal;
+    }
+}

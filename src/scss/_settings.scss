@@ -1,0 +1,211 @@
+@use "mixins/breakpoint";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family, sans-serif);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: normal;
+  background-color: var(--cs-body-bg);
+  color: var(--cs-light);
+  overflow-x: hidden;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.main {
+  position: relative;
+  margin-top: 121px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+  width: 95%;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@include breakpoint.mobile {
+  .main {
+    overflow: hidden;
+  }
+  .section {
+    overflow: hidden;
+  }
+}
+
+::-webkit-scrollbar {width: 4px;height: 0px;}
+::-webkit-scrollbar-track-piece {background:var(--cs-violet-lighter);}
+::-webkit-scrollbar-thumb:vertical {
+  height:10px;background:var(--cs-violet-light);-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  border: 1px solid var(--cs-violet-bright);
+}
+::-webkit-scrollbar-thumb:vertical:hover {background:var(--cs-violet-main);}
+
+.graph-modal {
+    backdrop-filter: blur(40px);
+    background: rgba(171, 171, 171, 0.3);
+}
+
+.uForm__error-msg {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: red;
+}
+.uForm__extended {
+    display: none;
+}
+
+.uForm__preload {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../uForm/img/loading.gif') no-repeat;
+    background-size: 120px;
+    background-position: center;
+    margin: 0 auto;
+    background-color: var(--cs-white);
+}
+
+
+@media (max-width: 1920px) {
+  .wrapper {
+    max-width: 1520px;
+  }
+}
+
+@media (max-width: 1728px) {
+  .wrapper {
+    max-width: 1408px;
+  }
+}
+
+
+@include breakpoint.big-desktop {
+    .main {
+        margin-top: 101px;
+    }
+    .wrapper {
+        max-width: 1200px;
+    }
+}
+
+@include breakpoint.small-desktop {
+    .main {
+        margin-top: 91px;
+    }
+    .wrapper {
+        max-width: 1120px;
+    }
+}
+
+@include breakpoint.tablet {
+    .wrapper {
+        max-width: 896px;
+    }
+}
+
+@include breakpoint.small-tablet {
+    .main {
+        margin-top: 71px;
+    }
+    .wrapper {
+        max-width: 680px;
+    }
+}
+
+@include breakpoint.mobile {
+    .main {
+        margin-top: 81px;
+    }
+}
+
+@media (max-width: 402px) {
+    .wrapper {
+        max-width: 362px;
+    }
+}

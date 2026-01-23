@@ -1,0 +1,35 @@
+.preloader-dots {
+    position: fixed;
+    background: var(--cs-bg-light);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity .5s ease;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1111;
+    top: 0;
+
+    &.remove {
+        animation: decreaseOpacity 3s ease-in-out forwards;
+    }
+
+    div {
+        width: 16px;
+        height: 16px;
+        margin: 32px 8px;
+        background: var(--cs-brand-main);
+        border-radius: 50%;
+        animation: .9s bounce infinite alternate;
+    }
+    & div:nth-child(2) {
+        animation-delay: .3s;
+    }
+    & div:last-child {
+        animation-delay: .6s;
+    }
+}
