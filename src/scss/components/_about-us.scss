@@ -1,0 +1,201 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-about-us {
+    .main-screen {
+        background-image: url('../images/about-us/main-screen/desktop.png');
+    }
+
+    .services {
+        background-color: var(--cs-white);
+
+        .section-title {
+            margin-bottom: 24px;
+        }
+
+        .section-text {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 150%;
+            letter-spacing: -0.02em;
+            text-align: center;
+            color: var(--cs-text-4);
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+
+        .service {
+            img {
+                border-radius: 12px;
+            }
+
+            &-label {
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 133%;
+                color: var(--cs-brand-main);
+                display: block;
+                margin-top: 50px;
+                margin-bottom: 0;
+            }
+
+            h3 {
+                margin-block: 30px;
+            }
+        }
+
+        &__container {
+            margin-bottom: 50px;
+        }
+
+        .btn-main {
+            @include content.btn-main;
+            margin-inline: auto;
+            min-width: 280px;
+        }
+    }
+}
+
+.about-company {
+    padding-block: 200px;
+    background-color: var(--cs-bg-light-3);
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 50px;
+
+        .title-wrap {
+            .section-label {
+                text-align: left;
+                margin-bottom: 24px;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 150%;
+            letter-spacing: -0.02em;
+            color: var(--cs-text-4);
+            margin-top: 0;
+            margin-bottom: 0;
+            max-width: 512px;
+        }
+    }
+
+    &__container {
+        @include mini.flex-all-sb;
+        gap: 62px;
+
+        img {
+            border-radius: 12px;
+        }
+
+        .content {
+            max-width: 786px;
+
+            .title {
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 120%;
+                color: var(--cs-text-3);
+                margin-top: 0;
+                margin-bottom: 24px;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 150%;
+                color: var(--cs-text-4);
+                margin-block: 0;
+            }
+        }
+    }
+}
+
+.why-choose-us {
+    padding-block: 200px;
+
+    .section-title {
+        margin-top: 24px;
+        margin-bottom: 40px;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .item {
+        @include mini.flex-all-center;
+        flex-direction: column;
+        text-align: center;
+
+        h3 {
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 150%;
+            letter-spacing: -0.03em;
+            text-align: center;
+            color: var(--cs-brand-main);
+            margin-top: 30px;
+            margin-bottom: 24px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 150%;
+            letter-spacing: -0.02em;
+            text-align: center;
+            color: var(--cs-text-4);
+            margin-block: 0;
+        }
+    }
+}
+
+.about-business {
+    background-color: var(--cs-bg-light-5);
+    padding-block: 200px;
+
+    .title {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        text-align: center;
+        color: var(--cs-text-3);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: var(--cs-text-4);
+        margin-top: 18px;
+        margin-bottom: 50px;
+        margin-inline: auto;
+        max-width: 950px;
+    }
+
+    .btn-main {
+        @include content.btn-main;
+        margin-inline: auto;
+        min-width: 280px;
+        margin-bottom: 50px;
+    }
+
+    img {
+        border-radius: 12px;
+        max-height: 480px;
+        width: 100%;
+    }
+}

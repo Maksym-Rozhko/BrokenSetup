@@ -7,9 +7,11 @@
 @use "./components/header";
 @use "./components/footer";
 @use "./components/home";
+@use "./components/about-us";
 @use "./mixins/burger";
 
 // подкоючение медиа
 @use "./components/media/header" as header2;
 @use "./components/media/footer" as footer2;
 @use "./components/media/home" as home2;
+@use "./components/media/about-us" as aboutUs2;

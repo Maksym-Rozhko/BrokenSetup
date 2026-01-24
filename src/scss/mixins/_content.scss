@@ -96,11 +96,11 @@
         }
 
         &:valid:not(:placeholder-shown) {
-            background-color: var(--cs-bg-light-2);
+            background-color: var(--cs-bg-light-3);
         }
 
         &:disabled {
-            background-color: var(--cs-bg-light-3);
+            background-color: var(--cs-bg-light-2);
         }
     }
 

@@ -1,0 +1,629 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-about-us {
+        .main-screen {
+            background-position: bottom right;
+        }
+
+        .services {
+            .section-title {
+                margin-bottom: 16px;
+            }
+
+            .section-text {
+                margin-bottom: 56px;
+            }
+
+            .service {
+                &-label {
+                    margin-top: 40px;
+                }
+            }
+
+            &__container {
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    .about-company {
+        padding-block: 160px;
+
+        &__top {
+            p {
+                max-width: 480px;
+            }
+        }
+
+        &__container {
+            img {
+                max-width: 720px;
+                width: 100%;
+            }
+
+            gap: 80px;
+        }
+    }
+
+    .why-choose-us {
+        padding-block: 160px;
+
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+    }
+
+    .about-business {
+        padding-block: 160px;
+
+        p {
+            font-size: 24px;
+            margin-top: 16px;
+            margin-bottom: 40px;
+            max-width: 890px;
+        }
+
+        img {
+            max-height: 450px;
+            min-height: 450px;
+        }
+    }
+}
+
+@media (max-width: 1728px) {
+    .page-about-us {
+        .services {
+            .section-text {
+                margin-bottom: 40px;
+            }
+
+            .service {
+                &-label {
+                    font-size: 21px;
+                    margin-top: 30px;
+                }
+
+                h3 {
+                    margin-block: 24px;
+                }
+            }
+        }
+    }
+
+    .about-company {
+        &__top {
+            margin-bottom: 40px;
+
+            p {
+                font-size: 21px;
+                max-width: 448px;
+            }
+        }
+
+        &__container {
+            gap: 68px;
+
+            .content {
+                max-width: 620px;
+
+                .title {
+                    font-size: 40px;
+                }
+
+                p {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+
+    .why-choose-us {
+        &__container {
+            gap: 35px;
+        }
+
+        .item {
+            img {
+                max-width: 140px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-about-us {
+        .main-screen {
+            background-position: bottom right -100px;
+        }
+
+        .services {
+            .service {
+                &-label {
+                    font-size: 18px;
+                    margin-top: 40px;
+                }
+
+                h3 {
+                    margin-top: 16px;
+                }
+            }
+
+            .btn-main {
+                font-size: 18px;
+            }
+        }
+    }
+    .about-company {
+        padding-block: 120px;
+
+        &__top {
+            p {
+                max-width: 384px;
+            }
+        }
+
+        &__container {
+            gap: 60px;
+
+            img {
+                max-width: 620px;
+            }
+
+            .content {
+                max-width: 520px;
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .why-choose-us {
+        padding-block: 120px;
+
+        .section-title {
+            margin-top: 16px;
+        }
+
+        &__container {
+            gap: 25px;
+        }
+
+        .item {
+            img {
+                max-width: 120px;
+            }
+
+            h3 {
+                font-size: 21px;
+                margin-bottom: 16px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .about-business {
+        padding-block: 120px;
+
+        .title {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 21px;
+            margin-top: 24px;
+            max-width: 750px;
+        }
+
+        .btn-main {
+            font-size: 18px;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-about-us {
+        .services {
+            .section-text {
+                font-size: 21px;
+            }
+        }
+    }
+    .about-company {
+        padding-top: 100px;
+        padding-bottom: 140px;
+
+        &__top {
+            .title-wrap {
+                .section-label {
+                    margin-bottom: 16px;
+                }
+            }
+
+            p {
+                max-width: 357px;
+            }
+        }
+
+        &__container {
+            gap: 60px;
+
+            img {
+                max-width: 540px;
+            }
+
+            .content {
+                max-width: 460px;
+
+                .title {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+
+    .why-choose-us {
+        padding-top: 100px;
+
+        .section-title {
+            margin-top: 16px;
+            margin-bottom: 20px;
+        }
+
+        &__container {
+            gap: 20px 24px
+        }
+
+        .item {
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-about-us {
+        .main-screen {
+            background-image: url('../images/about-us/main-screen/mobile.png');
+            background-position: center bottom;
+        }
+        .services {
+            &__container {
+                overflow-x: auto;
+                margin-right: -40px;
+                padding-right: 20px;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+
+            .section-title {
+                margin-bottom: 10px;
+            }
+
+            .section-text {
+                font-size: 18px;
+                margin-bottom: 24px;
+            }
+
+            .service {
+                min-width: 362px;
+
+                img {
+                    max-width: inherit;
+                    max-height: inherit;
+                }
+
+                &-label {
+                    margin-top: 20px;
+                }
+
+                h3 {
+                    margin-block: 16px;
+                }
+            }
+        }
+
+        .about-philosophy {
+            .about-company__container {
+                img {
+                    object-position: center -50px;
+                }
+            }
+        }
+    }
+
+    .about-company {
+        padding-block: 100px;
+
+        &__top {
+            flex-direction: column;
+            margin-bottom: 0;
+            gap: 0;
+
+            .title-wrap {
+                .section-label {
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+            }
+
+            p {
+                max-width: inherit;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 40px;
+            }
+        }
+
+        &__container {
+            flex-direction: column;
+            gap: 40px;
+
+            img {
+                max-width: inherit;
+                max-height: 436px;
+            }
+
+            .content {
+                max-width: inherit;
+                text-align: center;
+
+                .title {
+                    font-size: 32px;
+                    max-width: 730px;
+                    margin-inline: auto;
+                }
+            }
+        }
+    }
+
+    .why-choose-us {
+        padding-bottom: 100px;
+
+        .section-title {
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        &__container {
+            gap: 15px
+        }
+
+        .item {
+            h3 {
+                margin-top: 16px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .about-business {
+        .btn-main {
+            margin-bottom: 50px;
+        }
+
+        img {
+            max-height: 360px;
+            min-height: 360px;
+            object-fit: fill;
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-about-us {
+        .main-screen {
+            min-height: 1004px;
+        }
+
+        .services {
+            .section-text {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .about-company {
+        padding-block: 80px;
+
+        &__top {
+            p {
+                font-size: 16px;
+            }
+        }
+
+        &__container {
+            img {
+                max-height: 331px;
+            }
+
+            .content {
+                .title {
+                    font-size: 28px;
+                    max-width: 620px;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .why-choose-us {
+        padding-block: 80px;
+
+        &__container {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            margin-right: -40px;
+            padding-right: 20px;
+        }
+
+        .item {
+            min-width: 288px;
+            max-width: 288px;
+        }
+    }
+
+    .about-business {
+        padding-block: 80px;
+
+        .title {
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .btn-main {
+            margin-bottom: 30px;
+        }
+
+        img {
+            max-height: 252px;
+            min-height: 252px;
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-about-us {
+        .main-screen {
+            min-height: 720px;
+        }
+
+        .services {
+            &__container {
+                overflow: hidden;
+                grid-template-columns: 1fr;
+                margin-right: 0;
+                padding-right: 0;
+                padding-bottom: 0;
+                margin-bottom: 30px;
+                gap: 30px;
+            }
+
+            .section-text {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .service {
+                min-width: inherit;
+
+                img {
+                    width: 100%;
+                    max-height: 364px;
+                }
+            }
+        }
+
+        .about-philosophy {
+            .about-company__container {
+                img {
+                    object-position: center -30px;
+                }
+            }
+        }
+    }
+
+    .about-company {
+        padding-block: 60px;
+
+        &__top {
+            p {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+        }
+
+        &__container {
+            gap: 30px;
+
+            img {
+                max-height: 177px;
+            }
+
+            .content {
+                .title {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    .why-choose-us {
+        padding-block: 60px;
+
+        &__container {
+            margin-right: -20px;
+            padding-right: 10px;
+        }
+    }
+
+    .about-business {
+        padding-block: 60px;
+
+        .title {
+            font-size: 26px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        img {
+            max-height: 168px;
+            min-height: 168px;
+        }
+    }
+}
+
+@media (max-width: 402px) {
+    .page-about-us {
+        .main-screen {
+            padding-top: 60px;
+            min-height: 620px;
+        }
+
+        .services {
+            .service {
+                img {
+                    max-width: 364px;
+                    max-height: 364px;
+                }
+            }
+        }
+
+        .about-philosophy {
+            .about-company__container {
+                img {
+                    object-position: center -20px;
+                }
+            }
+        }
+    }
+}
