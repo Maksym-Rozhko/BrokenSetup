@@ -1,0 +1,193 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 2200px) {
+    .page-contact-us {
+        .main-screen {
+            background-position: bottom 100px right 250px;
+        }
+    }
+}
+
+@media (max-width: 2000px) {
+    .page-contact-us {
+        .main-screen {
+            background-position: bottom 100px right 150px;
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .page-contact-us {
+        .main-screen {
+            background-position: bottom 100px right 170px;
+            background-size: 828px 834px;
+        }
+
+        .contact-form {
+            padding-block: 160px;
+
+            p {
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1728px) {
+    .page-contact-us {
+        .main-screen {
+            background-position: bottom 140px right 120px;
+            background-size: 770px 776px;
+        }
+
+        .contact-form {
+            padding-block: 140px;
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-contact-us {
+        .main-screen {
+            background-size: 550px 559px;
+        }
+
+        .contact-form {
+            padding-block: 100px;
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-contact-us {
+        .main-screen {
+            background-position: bottom 100px right 50px;
+        }
+
+        .contact-form {
+            .section-title {
+                margin-block: 16px;
+            }
+
+            p {
+                font-size: 20px;
+                margin-bottom: 40px;
+                max-width: 630px;
+            }
+
+            .form {
+                .btn-main {
+                    font-size: 18px;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-contact-us {
+        .main-screen {
+            background-position: center bottom;
+            background-size: 610px 614px;
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-contact-us {
+        .main-screen {
+            min-height: 1004px;
+            background-size: 622px 627px;
+        }
+
+        .contact-form {
+            padding-block: 80px;
+
+            .section-title {
+                margin-block: 10px;
+            }
+
+            p {
+                font-size: 16px;
+                max-width: 500px;
+            }
+
+            .form {
+                max-width: 624px;
+
+                &-checkboxes {
+                    gap: 10px 24px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-contact-us {
+        .main-screen {
+            min-height: 720px;
+            background-size: 331px 333px;
+        }
+
+        .contact-form {
+            padding-block: 60px;
+
+            p {
+                margin-bottom: 30px;
+            }
+
+            .form {
+                &-group {
+                    margin-bottom: 16px;
+                }
+
+                &-checkboxes {
+                    gap: 10px;
+                }
+
+                &-checkbox {
+                    font-size: 16px;
+
+                    span {
+                        padding-left: 60px;
+                        padding-right: 10px;
+                    }
+                }
+
+                .btn-main {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 402px) {
+    .page-contact-us {
+        .main-screen {
+            padding-top: 60px;
+            min-height: 560px;
+            background-size: 231px 233px;
+        }
+
+        .contact-form {
+            .form {
+                &-checkboxes {
+                    grid-template-columns: 1fr;
+                }
+
+                &-checkbox {
+                    font-size: 18px;
+
+                    span {
+                        padding-left: 70px;
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
