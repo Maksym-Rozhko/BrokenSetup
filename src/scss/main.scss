@@ -10,6 +10,7 @@
 @use "./components/about-us";
 @use "./components/contact-us";
 @use "./components/roadmap";
+@use "./components/logo-brand";
 @use "./mixins/burger";
 
 // подкоючение медиа
@@ -19,3 +20,4 @@
 @use "./components/media/about-us" as aboutUs2;
 @use "./components/media/contact-us" as contactUs2;
 @use "./components/media/roadmap" as roadmap2;
+@use "./components/media/logo-brand" as logoBrand2;

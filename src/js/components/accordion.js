@@ -1,5 +1,6 @@
-function accordion(trigger, activeClass) {
+function accordion(trigger, activeClass, showMoreSelector) {
     const items = document.querySelectorAll(trigger);
+    const showMoreBtn = document.querySelector(showMoreSelector);
 
     if (items) {
         // const accordionRemoveItemElems = () => {
@@ -18,6 +19,15 @@ function accordion(trigger, activeClass) {
             });
           });
     }
+
+    if (showMoreBtn) {
+        showMoreBtn.addEventListener('click', () => {
+            items.forEach(item => {
+                item.parentElement.classList.remove('d-none');
+            });
+            showMoreBtn.classList.add('d-none');
+        });
+    }
 };
 
-accordion('.tricks__question', 'tricks__item--active');
+accordion('.tricks__question', 'tricks__item--active', '.tips .show-more');

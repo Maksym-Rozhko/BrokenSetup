@@ -360,6 +360,14 @@
             }
         }
     }
+
+    .btn-main {
+        @include content.btn-main;
+        @include content.btn-transparent-black;
+        max-width: 240px;
+        margin-inline: auto;
+        margin-top: 50px;
+    }
 }
 
 .ready {
