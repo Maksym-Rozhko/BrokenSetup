@@ -12,6 +12,7 @@
 @use "./components/roadmap";
 @use "./components/logo-brand";
 @use "./components/naming-domain";
+@use "./components/brandbook";
 @use "./mixins/burger";
 
 // подкоючение медиа
@@ -23,3 +24,4 @@
 @use "./components/media/roadmap" as roadmap2;
 @use "./components/media/logo-brand" as logoBrand2;
 @use "./components/media/naming-domain" as namingDomain2;
+@use "./components/media/brandbook" as brandbook2;
