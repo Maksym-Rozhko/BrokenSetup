@@ -1,0 +1,738 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+
+@media (max-width: 1920px) {
+    .page-forex-crm {
+        .main-screen {
+            background-position: bottom right -100px;
+
+            .text {
+                max-width: 550px;
+            }
+        }
+
+        .client-portal {
+            padding-block: 160px;
+
+            .section-title {
+                margin-block: 24px;
+            }
+
+            .section-text {
+                margin-bottom: 40px;
+            }
+
+            .content {
+                max-width: 720px;
+            }
+
+            img {
+                max-width: 772px;
+            }
+
+            &__container {
+                gap: 28px;
+            }
+        }
+
+        .benefits {
+            padding-block: 160px;
+
+            &__container {
+                gap: 20px;
+
+                .item {
+                    p {
+                        font-size: 21px;
+                        max-width: 420px;
+                    }
+                }
+            }
+        }
+
+        .key-features {
+            padding-top: 287px;
+            padding-bottom: 306px;
+
+            &::before {
+                top: 160px;
+                right: -70px;
+            }
+
+            &::after {
+                bottom: 160px;
+                left: -70px;
+            }
+
+            .section-title {
+                max-width: 424px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1728px) {
+    .page-forex-crm {
+        .main-screen {
+            background-position: bottom right -200px;
+        }
+
+        .key-features {
+            padding-top: 326px;
+            padding-bottom: 346px;
+            position: relative;
+
+            &::before,
+            &::after {
+                width: 880px;
+                height: 745px;
+            }
+
+            .item {
+                &:not(:last-child) {
+                    margin-bottom: 250px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-forex-crm {
+        .main-screen {
+            background-image: url('../images/forex-crm/main-screen/laptop.png');
+            background-position: center right;
+
+            .text {
+                max-width: 500px;
+            }
+        }
+
+        .client-portal {
+            padding-block: 120px;
+
+            .section-title {
+                margin-top: 16px;
+                line-height: 130%;
+                max-width: 325px;
+            }
+
+            .content {
+                max-width: 465px;
+            }
+
+            .section-text {
+                font-size: 18px;
+            }
+
+            img {
+                max-width: 680px;
+                width: 100%;
+                max-height: 542px;
+            }
+
+            .btn-main {
+                font-size: 18px;
+            }
+
+            &__container {
+                gap: 0;
+            }
+        }
+
+        .benefits {
+            padding-block: 100px;
+
+            .section-title {
+                margin-top: 16px;
+                margin-bottom: 40px;
+            }
+
+            &__container {
+                gap: 16px;
+
+                .item {
+                    .icon {
+                        width: 52px;
+                        height: 52px;
+                        outline-offset: 4px;
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 21px;
+                        margin-bottom: 16px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        max-width: 355px;
+                    }
+
+                    a {
+                        font-size: 18px;
+                        padding-right: 24px;
+
+                        &::after {
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .key-features {
+            padding-top: 207px;
+            padding-bottom: 184px;
+
+            &::before,
+            &::after {
+                width: 760px;
+                height: 524px;
+            }
+
+            &::before {
+                top: 120px;
+                right: -34px;
+            }
+
+            &::after {
+                bottom: 120px;
+                left: -57px;
+            }
+
+            .item {
+                max-width: 520px;
+
+                &:not(:last-child) {
+                    margin-bottom: 250px;
+                }
+
+                .section-text {
+                    font-size: 21px;
+                }
+
+                ul {
+                    li {
+                        font-size: 21px;
+
+                        &:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ready-banner--order {
+            .ready-banner {
+                &__container {
+                    min-height: 524px;
+                    padding: 148px 80px;
+
+                    &::before {
+                        background-size: contain;
+                        left: -30px;
+                    }
+                }
+            }
+
+            .content-wrap {
+                max-width: 307px;
+            }
+
+            .title {
+                font-size: 60px;
+                max-width: 578px;
+            }
+
+            p {
+                font-size: 21px;
+                max-width: 230px;
+            }
+
+            .btn-main {
+                min-width: 280px;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-forex-crm {
+        .client-portal {
+            padding-block: 100px;
+
+            img {
+                max-width: 584px;
+                max-height: 466px;
+            }
+
+            &__container {
+                align-items: center;
+                gap: 16px;
+            }
+        }
+
+        .benefits {
+            .section-title {
+                font-size: 40px;
+            }
+
+            &__container {
+                gap: 16px 14px;
+            }
+        }
+
+        .key-features {
+            padding-top: 160px;
+            padding-bottom: 136px;
+
+            &::before,
+            &::after {
+                width: 680px;
+                height: 469px;
+            }
+
+            &::before {
+                top: 100px;
+                right: -52px;
+            }
+
+            &::after {
+                bottom: 100px;
+                left: -48px;
+            }
+
+            .item {
+                &:not(:last-child) {
+                    margin-bottom: 200px;
+                }
+            }
+        }
+
+        .ready-banner--order {
+            .ready-banner {
+                &__container {
+                    padding: 148px 80px 148px 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .page-forex-crm {
+        .key-features {
+            &::before,
+            &::after {
+                width: 580px;
+                height: 380px;
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-forex-crm {
+        .main-screen {
+            background-image: url('../images/forex-crm/main-screen/tablet.png');
+            background-position: center bottom;
+        }
+
+        .client-portal {
+            .section-label,
+            .section-title,
+            .section-text {
+                text-align: center;
+            }
+
+            .section-title {
+                margin-top: 10px;
+                max-width: inherit;
+            }
+
+            .content {
+                max-width: 690px;
+                margin-inline: auto;
+            }
+
+            img {
+                max-width: 742px;
+                max-height: 591px;
+            }
+
+            .btn-main {
+                margin-inline: auto;
+            }
+
+            &__container {
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+            }
+        }
+
+        .benefits {
+            .section-title {
+                font-size: 36px;
+                margin-top: 10px;
+            }
+
+            &__container {
+                gap: 20px;
+
+                .item {
+                    padding: 40px 30px 40px 40px;
+                }
+            }
+        }
+
+        .key-features {
+            padding-top: 135px;
+            padding-bottom: 114px;
+
+            &::before,
+            &::after {
+                width: 540px;
+                height: 372px;
+                z-index: -1;
+            }
+
+            &::before {
+                right: -50px;
+            }
+
+            &::after {
+                left: -35px;
+            }
+
+            .item {
+                max-width: 420px;
+
+                &:not(:last-child) {
+                    margin-bottom: 130px;
+                }
+
+                .section-text {
+                    font-size: 18px;
+                    margin-block: 16px;
+                }
+
+                ul {
+                    li {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .ready-banner--order {
+            .ready-banner {
+                &__container {
+                    flex-direction: column;
+                    padding: 129px 30px;
+                    gap: 24px;
+
+                    &::before {
+                        background-size: cover;
+                        left: 0;
+                    }
+                }
+            }
+
+            .title {
+                font-size: 40px;
+                max-width: 560px;
+                margin-left: auto;
+                text-align: center;
+            }
+
+            .content-wrap {
+                max-width: inherit;
+            }
+
+            p {
+                max-width: inherit;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@include breakpoint.middle-tablet {
+    .page-forex-crm {
+        .key-features {
+            &::before,
+            &::after {
+                width: 414px;
+                height: 285px;
+            }
+
+            .item {
+                max-width: 380px;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-forex-crm {
+        .main-screen {
+            .text {
+                max-width: 400px;
+            }
+        }
+
+        .client-portal {
+            padding-block: 80px;
+
+            .section-title {
+                margin-bottom: 12px;
+            }
+
+            .content {
+                max-width: 596px;
+            }
+
+            img {
+                max-width: 674px;
+                max-height: 537px;
+            }
+
+            &__container {
+                gap: 40px;
+            }
+        }
+
+        .benefits {
+            padding-block: 80px;
+
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 36px;
+            }
+
+            &__container {
+                display: flex;
+                gap: 16px;
+                overflow-x: auto;
+                margin-right: -40px;
+                padding-right: 20px;
+                padding-bottom: 10px;
+
+                .item {
+                    min-width: 346px;
+                    padding: 40px 24px 40px 40px;
+
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        .key-features {
+            padding-top: 80px;
+            padding-bottom: 80px;
+
+            &::before {
+                top: 87px;
+            }
+
+            &::after {
+                bottom: 91px;
+                left: -50px;
+            }
+
+            .item {
+                max-width: 332px;
+
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+
+                .section-text {
+                    font-size: 16px;
+                }
+
+                ul {
+                    li {
+                        font-size: 16px;
+                        padding-left: 40px;
+
+                        &:not(:last-child) {
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ready-banner--order {
+            .ready-banner {
+                &__container {
+                    min-height: 362px;
+                    padding: 73px 30px;
+                    gap: 12px;
+
+                    &::before {
+                        background-image: url('../images/brandbook/ready/main-2-mob.svg');
+                    }
+                }
+            }
+
+            .title {
+                font-size: 32px;
+                max-width: 488px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .page-forex-crm {
+        .key-features {
+            &::before,
+            &::after {
+                width: 320px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-forex-crm {
+        .main-screen {
+            background-image: url('../images/forex-crm/main-screen/mobile.png');
+            background-size: 510px 400px;
+        }
+
+        .client-portal {
+            padding-block: 60px;
+
+            .section-title {
+                margin-bottom: 16px;
+                max-width: 220px;
+                margin-inline: auto;
+            }
+
+            .section-text {
+                margin-bottom: 30px;
+                font-size: 16px;
+            }
+
+            img {
+                max-width: 362px;
+                max-height: 288px;
+            }
+
+            &__container {
+                gap: 30px;
+            }
+        }
+
+        .benefits {
+            padding-block: 60px;
+
+            .section-title {
+                font-size: 26px;
+                margin-top: 10px;
+                margin-bottom: 24px;
+            }
+
+            &__container {
+                margin-right: -20px;
+
+                .item {
+                    h3 {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+
+        .key-features {
+            padding-block: 60px;
+
+            &::before,
+            &::after {
+                width: 414px;
+                height: 284px;
+            }
+
+            &::before {
+                top: calc(50% - 300px);
+                right: -32px;
+            }
+
+            &::after {
+                bottom: calc(50% - 300px);
+                left: -32px;
+            }
+
+            .item {
+                max-width: inherit;
+
+                &:not(:last-child) {
+                    margin-bottom: 660px;
+                }
+
+                .section-text {
+                    margin-block: 12px;
+                }
+
+                ul {
+                    li {
+                        padding-left: 44px;
+                    }
+                }
+            }
+        }
+
+        .ready-banner--order {
+            .ready-banner {
+                &__container {
+                    min-height: inherit;
+                    padding: 67px 40px;
+                    gap: 10px;
+                }
+            }
+
+            .title {
+                font-size: 30px;
+                max-width: 282px;
+            }
+
+            p {
+                max-width: 200px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 402px) {
+    .page-forex-crm {
+        .main-screen {
+            background-size: contain;
+        }
+    }
+}

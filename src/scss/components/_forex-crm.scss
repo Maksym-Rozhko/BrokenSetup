@@ -1,0 +1,284 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-forex-crm {
+    .main-screen {
+        background-color: var(--cs-bg-light-3);
+        background-image: url('../images/forex-crm/main-screen/desktop.png');
+
+        .text {
+            max-width: 650px;
+        }
+    }
+
+    .client-portal {
+        padding-block: 200px;
+
+        .section-label,
+        .section-title,
+        .section-text {
+            text-align: left;
+        }
+
+        .section-label {
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            margin-top: 24px;
+            margin-bottom: 30px;
+        }
+
+        .section-text {
+            margin-bottom: 50px;
+        }
+
+        .btn-main {
+            @include content.btn-main;
+            max-width: 280px;
+        }
+
+        .content {
+            max-width: 735px;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+    }
+
+    .benefits {
+        padding-block: 200px;
+        background-color: var(--cs-bg-light-3);
+
+        .section-label {
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            margin-top: 24px;
+            margin-bottom: 60px;
+        }
+
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 56px;
+
+            .item {
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+                background-color: var(--cs-white);
+                border-radius: 24px;
+                border: 1px solid #e9eaeb;
+                padding: 40px;
+
+                .icon {
+                    @include mini.flex-all-center;
+                    box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.2);
+                    background: var(--cs-white);
+                    border-radius: 10px;
+                    border: 1px solid #e9eaeb;
+                    width: 69px;
+                    height: 69px;
+                    outline: 1px solid #e9eaeb;
+                    outline-offset: 5px;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: 28px;
+                    line-height: 150%;
+                    letter-spacing: -0.02em;
+                    color: var(--cs-text-3);
+                    margin-top: 30px;
+                    margin-bottom: 24px;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 150%;
+                    letter-spacing: -0.02em;
+                    color: var(--cs-text-4);
+                    margin-top: 0;
+                    margin-bottom: 40px;
+                    max-width: 470px;
+                    text-wrap-style: pretty;
+                }
+
+                a {
+                    @include mini.flex-v-center;
+                    font-weight: 700;
+                    font-size: 21px;
+                    line-height: 100%;
+                    color: var(--cs-brand-main);
+                    padding-right: 36px;
+                    position: relative;
+                    display: block;
+                    max-width: fit-content;
+                    transition: all ease-in-out .4s;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 24px;
+                        height: 24px;
+                        background-image: url('../images/icon/arrow-narrow-brand.svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: all ease-in-out .4s;
+                    }
+
+                    &:hover {
+                        color: var(--cs-text-3);
+
+                        &::after {
+                            filter: brightness(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .key-features {
+        padding-top: 326px;
+        padding-bottom: 346px;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1080px;
+            height: 745px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &::before {
+            background-image: url('../images/forex-crm/key-features/1.png');
+            background-position: center right;
+            top: 200px;
+            right: 0;
+        }
+
+        &::after {
+            background-image: url('../images/forex-crm/key-features/2.png');
+            background-position: center left;
+            bottom: 200px;
+            left: -40px;
+        }
+
+        .item {
+            max-width: 512px;
+
+            &:not(:last-child) {
+                margin-bottom: 374px;
+            }
+
+            &:nth-child(even) {
+                margin-left: auto;
+            }
+
+            .section-title {
+                line-height: 120%;
+                text-align: left;
+            }
+
+            .section-text {
+                text-align: left;
+                margin-block: 24px;
+            }
+
+            ul {
+                li {
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 150%;
+                    letter-spacing: -0.02em;
+                    color: var(--cs-text-3);
+                    padding-left: 44px;
+                    position: relative;
+
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+
+                    &::before {
+                        @include mini.flex-all-center;
+                        content: "";
+                        position: absolute;
+                        width: 28px;
+                        height: 28px;
+                        border-radius: 6px;
+                        background-color: var(--cs-brand-main);
+                        background-image: url('../images/icon/check.svg');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: auto;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+
+    .ready-banner--order {
+        padding-block: 0;
+
+        .ready-banner {
+            &__container {
+                @include mini.flex-all-sb;
+                background: linear-gradient(135deg, #9278ff 0%, #4b28b1 100%);
+                padding: 120px 100px;
+                min-height: 568px;
+                gap: 20px;
+                position: relative;
+                z-index: 1;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    bottom: 0;
+                    background-image: url('../images/brandbook/ready/main-2.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: auto;
+                    z-index: -1;
+                    left: -200px;
+                }
+            }
+        }
+
+        .content-wrap {
+            max-width: 307px;
+        }
+
+        .title {
+            font-size: 80px;
+            line-height: 130%;
+            margin-left: 0;
+            text-align: left;
+            max-width: 780px;
+        }
+
+        p {
+            font-size: 28px;
+            line-height: 150%;
+            text-align: left;
+            margin-top: 0;
+        }
+    }
+}

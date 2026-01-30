@@ -13,6 +13,7 @@
 @use "./components/logo-brand";
 @use "./components/naming-domain";
 @use "./components/brandbook";
+@use "./components/forex-crm";
 @use "./mixins/burger";
 
 // подкоючение медиа
@@ -25,3 +26,4 @@
 @use "./components/media/logo-brand" as logoBrand2;
 @use "./components/media/naming-domain" as namingDomain2;
 @use "./components/media/brandbook" as brandbook2;
+@use "./components/media/forex-crm" as forexCrm2;
