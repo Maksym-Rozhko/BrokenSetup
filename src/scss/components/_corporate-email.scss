@@ -1,0 +1,105 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-corporate-email {
+    .main-screen {
+        padding-top: 82px;
+        background-image: none;
+
+        .text {
+            max-width: 800px;
+        }
+    }
+
+    .corporate-email {
+        padding-top: 200px;
+
+        .section-title {
+            max-width: inherit;
+        }
+
+        .content {
+            max-width: 750px;
+        }
+
+        img {
+            border-radius: 24px;
+        }
+    }
+
+    .why-choose {
+        background-color: transparent;
+
+        .section-label {
+            text-transform: uppercase;
+        }
+
+        &__container {
+            .item {
+                min-height: 320px;
+                box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.15);
+                background: var(--cs-bg-light-11);
+
+                h3 {
+                    text-transform: capitalize;
+                    margin-top: 32px;
+                    margin-bottom: 24px;
+                }
+
+                .icon {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+    }
+
+    .brand-app {
+        padding-top: 200px;
+        background-color: var(--cs-bg-light-3);
+
+        &__container {
+            &::before {
+                content: none;
+            }
+        }
+
+        .item {
+            &:nth-child(even) {
+                .content {
+                    max-width: 768px;
+                }
+            }
+
+            .section-title {
+                max-width: 563px;
+            }
+
+            .content {
+                max-width: 768px;
+            }
+
+            img {
+                max-width: 768px;
+                max-height: 620px;
+                width: 100%;
+            }
+        }
+    }
+
+    .ready-banner--order {
+        padding-top: 200px;
+
+        &::before,
+        &::after {
+            content: none;
+        }
+
+        .ready-banner {
+            &__container {
+                min-height: 568px;
+                padding-block: 173px;
+            }
+        }
+    }
+}

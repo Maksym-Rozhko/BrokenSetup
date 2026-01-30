@@ -1,0 +1,506 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-corporate-email {
+        .main-screen {
+            padding-top: 40px;
+
+            .text {
+                max-width: 700px;
+            }
+        }
+
+        .corporate-email {
+            padding-top: 160px;
+
+            &__container {
+                gap: 74px;
+            }
+
+            .content {
+                max-width: 700px;
+            }
+
+            img {
+                max-width: 720px;
+                max-height: 582px;
+            }
+        }
+
+        .why-choose {
+            &__container {
+                .item {
+                    h3 {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        .brand-app {
+            padding-top: 160px;
+
+            .item {
+                &:nth-child(even) {
+                    .content {
+                        max-width: 720px;
+                    }
+                }
+
+                .section-title {
+                    max-width: 563px;
+                }
+
+                .content {
+                    max-width: 720px;
+                }
+
+                img {
+                    max-width: 720px;
+                    max-height: 581px;
+                }
+            }
+        }
+
+        .ready-banner--order {
+            padding-top: 160px;
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-corporate-email {
+        .main-screen {
+            background: linear-gradient(180deg, #fff 0%, #f4f4f5 100%);
+
+            .letter {
+                max-width: 240px;
+                max-height: 194px;
+            }
+
+            .text {
+                font-size: 21px;
+                max-width: 450px;
+            }
+
+            .form {
+                margin-bottom: 120px;
+            }
+        }
+
+        .corporate-email {
+            padding-top: 120px;
+
+            &__container {
+                gap: 60px;
+            }
+
+            .content {
+                max-width: 500px;
+            }
+
+            img {
+                max-width: 620px;
+                max-height: 500px;
+            }
+        }
+
+        .why-choose {
+            &__container {
+                .item {
+                    h3 {
+                        margin-bottom: 12px;
+                        max-width: 160px;
+                        text-wrap-style: pretty;
+                    }
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .brand-app {
+            padding-top: 120px;
+
+            &__container {
+                z-index: 1;
+            }
+
+            .item {
+                &:nth-child(even) {
+                    .content {
+                        max-width: 521px;
+                    }
+                }
+
+                .section-title {
+                    line-height: 120%;
+                }
+
+                .content {
+                    max-width: 521px;
+                }
+
+                img {
+                    max-width: 540px;
+                    max-height: 440px;
+                }
+            }
+        }
+
+        .ready-banner--order {
+            padding-top: 120px;
+
+            .ready-banner {
+                &__container {
+                    min-height: 524px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-corporate-email {
+        .main-screen {
+            .text {
+                margin-top: 24px;
+            }
+
+            .form {
+                margin-bottom: 110px;
+            }
+        }
+
+        .corporate-email {
+            padding-top: 100px;
+
+            .content {
+                max-width: 500px;
+            }
+
+            img {
+                max-width: 540px;
+                max-height: 436px;
+            }
+        }
+
+        .brand-app {
+            padding-top: 100px;
+
+            .item {
+                &:nth-child(even) {
+                    .content {
+                        max-width: 521px;
+                    }
+                }
+
+                .section-title {
+                    max-width: 450px;
+                }
+
+                .content {
+                    max-width: 521px;
+                }
+            }
+        }
+
+        .ready-banner--order {
+            padding-top: 100px;
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-corporate-email {
+        .main-screen {
+            .form {
+                margin-bottom: 286px;
+            }
+        }
+
+        .corporate-email {
+            &__container {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            .section-label,
+            .section-title,
+            .section-text {
+                text-align: center;
+            }
+            .section-text {
+                font-size: 18px;
+            }
+            .content {
+                max-width: 700px;
+            }
+            .btn-main {
+                margin-inline: auto;
+            }
+
+            img {
+                width: 100%;
+                max-width: 896px;
+                max-height: 570px;
+            }
+        }
+
+        .why-choose {
+            &__container {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 740px;
+                margin-inline: auto;
+
+                .item {
+                    h3 {
+                        margin-top: 32px;
+                    }
+                }
+            }
+        }
+
+        .brand-app {
+            .item {
+                &:nth-child(even) {
+                    .content {
+                        max-width: 461px;
+                    }
+                }
+
+                .content {
+                    max-width: 461px;
+                }
+
+                img {
+                    max-width: 400px;
+                    max-height: 323px;
+                    min-height: 323px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-corporate-email {
+        .main-screen {
+            padding-top: 60px;
+
+            .form {
+                margin-bottom: 265px;
+            }
+        }
+        .corporate-email {
+            padding-top: 80px;
+
+            .section-text {
+                font-size: 16px;
+            }
+
+            img {
+                max-width: 680px;
+                max-height: 432px;
+            }
+        }
+
+        .why-choose {
+            &__container {
+                display: grid;
+                overflow-x: inherit;
+                padding-right: 0;
+                padding-left: 0;
+                margin-right: 0;
+
+                .item {
+                    min-width: inherit;
+                    min-height: 260px;
+
+                    h3 {
+                        margin-bottom: 16px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .brand-app {
+            padding-top: 80px;
+
+            .item {
+                flex-direction: row;
+
+                &:not(:last-child) {
+                    margin-bottom: 80px;
+                }
+
+                &:nth-child(even) {
+                    flex-direction: row-reverse;
+
+                    .content {
+                        max-width: 331px;
+                    }
+                }
+
+                .section-title {
+                    font-size: 28px;
+                }
+
+                .section-text {
+                    margin-bottom: 0;
+                }
+
+                .content {
+                    max-width: 331px;
+                }
+
+                img {
+                    max-width: 299px;
+                    max-height: 242px;
+                    min-height: 242px;
+                }
+            }
+        }
+
+        .ready-banner--order {
+            padding-top: 80px;
+
+            .ready-banner {
+                &__container {
+                    min-height: 362px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-corporate-email {
+        .main-screen {
+            min-height: inherit;
+            padding-top: 40px;
+            padding-bottom: 30px;
+
+            .letter {
+                max-width: 160px;
+                max-height: 129px;
+            }
+
+            .title {
+                font-size: 30px;
+                max-width: 340px;
+            }
+
+            .text {
+                font-size: 18px;
+                margin-top: 10px;
+                margin-bottom: 7px;
+            }
+
+            .form {
+                margin-bottom: 38px;
+
+                .btn-main {
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .corporate-email {
+            padding-top: 60px;
+
+            .section-title {
+                margin-bottom: 16px;
+            }
+
+            .section-text {
+                font-size: 16px;
+            }
+
+            img {
+                max-height: 240px;
+            }
+        }
+
+        .why-choose {
+            &__container {
+                display: flex;
+                overflow-x: auto;
+                padding-right: 20px;
+                margin-right: -20px;
+                max-width: inherit;
+
+                .item {
+                    min-width: 322px;
+
+                    h3 {
+                        max-width: inherit;
+                    }
+                }
+            }
+        }
+
+        .brand-app {
+            padding-top: 60px;
+
+            &__container {
+                &::before {
+                    content: none;
+                }
+            }
+
+            .item {
+                flex-direction: column-reverse;
+
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+
+                &:nth-child(even) {
+                    flex-direction: column-reverse;
+
+                    .content {
+                        max-width: inherit;
+                    }
+                }
+
+                .section-title {
+                    font-size: 26px;
+                }
+
+                .content {
+                    max-width: inherit;
+                }
+
+                img {
+                    max-width: inherit;
+                    max-height: 292px;
+                    min-height: 292px;
+                }
+            }
+        }
+
+        .ready-banner--order {
+            padding-top: 60px;
+
+            .ready-banner {
+                &__container {
+                    gap: 12px;
+                    padding: 67px 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 402px) {
+    .page-corporate-email {
+
+    }
+}
