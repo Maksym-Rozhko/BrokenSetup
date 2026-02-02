@@ -1,0 +1,551 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+
+@media (max-width: 1920px) {
+    .page-pamm {
+        .main-screen {
+            background-position: bottom right;
+
+            &__container {
+                max-width: 1060px;
+            }
+
+            .text {
+                margin-top: 24px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .design {
+            padding-bottom: 160px;
+
+            .content {
+                max-width: 720px;
+            }
+
+            img {
+                max-width: 720px;
+                max-height: 584px;
+            }
+        }
+
+        .why-pamm {
+            padding-block: 160px;
+
+            &__container {
+                .item {
+                    p {
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+
+        .ready-banner {
+            padding-block: 160px;
+
+            &--order {
+                .title {
+                    font-size: 60px;
+                }
+            }
+        }
+
+        .section-padding-top {
+            padding-top: 160px;
+        }
+    }
+}
+
+@media (max-width: 1728px) {
+    .page-pamm {
+        .main-screen {
+            &__container {
+                max-width: 660px;
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-pamm {
+        .main-screen {
+            .title {
+                font-size: 40px;
+            }
+        }
+
+        .design {
+            padding-bottom: 120px;
+
+            .section-title {
+                margin-top: 16px;
+            }
+
+            .content {
+                max-width: 531px;
+            }
+
+            img {
+                max-width: 620px;
+                max-height: 504px;
+            }
+        }
+
+        .why-pamm {
+            padding-block: 120px;
+
+            .section-text {
+                font-size: 18px;
+                max-width: 832px;
+            }
+
+            &__container {
+                gap: 24px;
+
+                .item {
+                    h3 {
+                        font-size: 21px;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .ready-banner {
+            padding-block: 120px;
+
+            &--order {
+                .ready-banner {
+                    &__container {
+                        padding: 130px 80px;
+                        min-height: 420px;
+                    }
+                }
+
+                .title {
+                    font-size: 50px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .section-padding-top {
+            padding-top: 120px;
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-pamm {
+        .design {
+            padding-bottom: 100px;
+
+            .content {
+                max-width: 510px;
+            }
+
+            img {
+                max-width: 540px;
+                max-height: 438px;
+            }
+        }
+
+        .why-pamm {
+            padding-block: 120px;
+
+            .section-text {
+                margin-top: 16px;
+                margin-bottom: 40px;
+            }
+
+            &__container {
+                .item {
+                    h3 {
+                        font-size: 18px;
+                        margin-bottom: 16px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .ready-banner {
+            padding-block: 100px;
+        }
+
+        .section-padding-top {
+            padding-top: 100px;
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-pamm {
+        .main-screen {
+            background-image: url('../images/pamm/main-screen/tablet.png');
+            background-position: center bottom;
+            padding-block: 100px;
+
+            &__container {
+                margin-inline: auto;
+            }
+
+            .title,
+            .text {
+                text-align: center;
+            }
+
+            .title {
+                max-width: inherit;
+            }
+
+            .btn-main {
+                margin-inline: auto;
+            }
+        }
+
+        .benefits {
+            .section-title {
+                font-size: 32px;
+                max-width: 360px;
+                margin-inline: auto;
+            }
+        }
+
+        .design {
+            &__container {
+                flex-direction: column;
+            }
+
+            .section-label {
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 32px;
+                margin-top: 10px;
+                text-align: center;
+                max-width: 424px;
+                margin-inline: auto;
+            }
+
+            .section-text {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .content {
+                max-width: 600px;
+            }
+
+            .btn-main {
+                margin-inline: auto;
+            }
+
+            img {
+                width: 100%;
+                max-width: inherit;
+                min-height: 570px;
+            }
+        }
+
+
+        .why-pamm {
+            padding-block: 100px;
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .section-text {
+                margin-top: 10px;
+            }
+
+            &__container {
+                gap: 16px;
+
+                .item {
+                    padding-left: 44px;
+
+                    &::before,
+                    &::after {
+                        width: 28px;
+                        height: 28px;
+                    }
+                    h3 {
+                        margin-bottom: 7px;
+                    }
+                }
+            }
+        }
+
+        .ready-banner {
+            padding-block: 80px;
+
+            &--order {
+                .ready-banner {
+                    &__container {
+                        flex-direction: row;
+                        padding: 90px 60px;
+                        min-height: 360px;
+                    }
+                }
+
+                .title {
+                    font-size: 40px;
+                    margin-left: 0;
+                    text-align: left;
+                }
+
+                p {
+                    text-align: left;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-pamm {
+        .main-screen {
+            background-image: url('../images/pamm/main-screen/mobile.png');
+            padding-block: 120px;
+
+            .title {
+                max-width: 480px;
+                margin-inline: auto;
+            }
+
+            .text {
+                max-width: inherit;
+            }
+
+            .btn-main {
+                margin-inline: auto;
+            }
+        }
+
+        .benefits {
+            .section-title {
+                font-size: 28px;
+                max-width: 300px;
+            }
+
+            &__container {
+                .item {
+                    min-width: 320px;
+                    padding: 24px 24px 16px;
+                    h3 {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+
+        .design {
+            padding-bottom: 80px;
+
+            .section-title {
+                font-size: 28px;
+                max-width: 380px;
+            }
+
+            .section-text {
+                font-size: 16px;
+            }
+
+            .content {
+                max-width: 624px;
+            }
+
+            img {
+                min-height: 434px;
+                max-height: 434px;
+            }
+        }
+
+        .why-pamm {
+            padding-block: 80px;
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-text {
+                margin-top: 16px;
+                font-size: 16px;
+            }
+
+            &__container {
+                display: flex;
+                overflow-x: auto;
+                margin-right: -40px;
+                padding-right: 20px;
+
+                .item {
+                    min-width: 288px;
+                    padding-left: 44px;
+
+                    h3 {
+                        margin-bottom: 12px;
+                        text-wrap-style: balance;
+                        max-width: 200px;
+                    }
+                }
+            }
+        }
+
+        .ready-banner {
+            &--order {
+                .ready-banner {
+                    &__container {
+                        flex-direction: column;
+                        padding: 80px 60px;
+                        min-height: 420px;
+                        gap: 24px;
+                    }
+                }
+
+                .title {
+                    margin-left: auto;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 21px;
+                    text-align: center;
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .section-padding-top {
+            padding-top: 80px;
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-pamm {
+        .main-screen {
+            background-size: contain;
+            padding-block: 30px;
+            min-height: 740px;
+
+            .title {
+                font-size: 30px;
+            }
+
+            .text {
+                font-size: 18px;
+                margin-top: 16px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .benefits {
+            .section-title {
+                font-size: 26px;
+                max-width: 250px;
+            }
+        }
+
+        .design {
+            padding-bottom: 60px;
+
+            .section-title {
+                font-size: 26px;
+                max-width: 355px;
+                margin-bottom: 12px;
+            }
+
+            .section-text {
+                margin-bottom: 30px;
+            }
+
+            img {
+                min-height: 308px;
+                max-height: 308px;
+            }
+        }
+
+        .why-pamm {
+            padding-block: 60px;
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            .section-text {
+                margin-top: 0;
+
+                br {
+                    display: none;
+                }
+            }
+
+            &__container {
+                margin-right: -20px;
+            }
+        }
+
+        .ready-banner {
+            padding-block: 60px;
+
+            &--order {
+                .ready-banner {
+                    &__container {
+                        padding: 85px 17px;
+                        min-height: 362px;
+                        gap: 12px;
+                    }
+                }
+
+                .title {
+                    font-size: 30px;
+                }
+
+                p {
+                    max-width: inherit;
+                    font-size: 16px;
+                }
+            }
+        }
+
+
+        .section-padding-top {
+            padding-top: 60px;
+        }
+    }
+}
+
+@media (max-width: 402px) {
+    .page-pamm {
+        .main-screen {
+            background-size: 425px 425px;
+        }
+
+        .design {
+            img {
+                min-height: 208px;
+                max-height: 208px;
+            }
+        }
+    }
+}
