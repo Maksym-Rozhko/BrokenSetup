@@ -49,6 +49,50 @@
         @include content.form;
     }
 
+    &.modal-success {
+        background-color: var(--cs-white);
+        padding: 160px 30px 60px;
+
+        img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .btn-main {
+            @include mini.flex-all-center;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0.02em;
+            text-align: center;
+            color: var(--cs-white);
+            background: linear-gradient(135deg, #9278ff 0%, #4b28b1 100%);
+            border-radius: 40px;
+            transition: all ease-in-out .4s;
+            padding: 13px 30px;
+            max-width: fit-content;
+            width: 100%;
+            min-height: 60px;
+            margin-inline: auto;
+            max-width: 240px;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(135deg, #7156e1 0%, #281461 100%);
+            }
+        }
+
+        .graph-modal {
+            &__text {
+                font-size: 18px;
+            }
+        }
+    }
+
     @include breakpoint.mobile {
         padding: 80px 13px;
 
@@ -79,6 +123,26 @@
 
         .btn-main {
             margin-top: 30px;
+        }
+
+        &.modal-success {
+            padding: 160px 13px 80px;
+
+            img {
+                top: 40px;
+            }
+
+            .graph-modal {
+                &__title,
+                &__text {
+                    max-width: inherit;
+                }
+
+                &__text {
+                    font-size: 16px;
+                    margin-bottom: 40px;
+                }
+            }
         }
     }
 }
