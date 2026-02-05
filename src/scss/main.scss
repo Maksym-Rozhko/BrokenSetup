@@ -17,6 +17,7 @@
 @use "./components/corporate-email";
 @use "./components/mt5";
 @use "./components/pamm";
+@use "./components/page-404";
 @use "./mixins/burger";
 
 // подкоючение медиа
@@ -32,3 +33,4 @@
 @use "./components/media/forex-crm" as forexCrm2;
 @use "./components/media/corporate-email" as corporateEmail2;
 @use "./components/media/pamm" as pamm2;
+@use "./components/media/page-404" as page-4042;

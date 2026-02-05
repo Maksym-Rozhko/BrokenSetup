@@ -325,7 +325,8 @@
             padding-left: 28px;
             padding-right: 28px;
             padding-bottom: 0;
-            height: 0;
+            max-height: 0;
+            opacity: 0;
             overflow: hidden;
             padding-bottom: 0;
             transition: all ease-in-out .4s;
@@ -355,8 +356,9 @@
             }
             .tricks__answer {
                 padding-bottom: 50px;
-                height: auto;
+                max-height: 2000px;
                 overflow: visible;
+                opacity: 1;
             }
         }
     }

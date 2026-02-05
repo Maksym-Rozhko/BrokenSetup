@@ -1,0 +1,76 @@
+@use "../../mixins/breakpoint";
+
+
+@media (max-width: 1920px) {
+    .page-404 {
+        .section-error {
+            padding-bottom: 110px;
+            min-height: inherit;
+
+            img {
+                margin-top: -40px;
+            }
+
+            .section-title {
+                margin-top: -30px;
+                font-size: 60px;
+            }
+
+            .section-text {
+                font-size: 26px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-404 {
+        .section-error {
+            padding-top: 95px;
+
+            &__container {
+                max-width: 430px;
+            }
+
+            img {
+                max-width: 220px;
+                max-height: 220px;
+            }
+
+            .section-title {
+                margin-top: 0;
+                font-size: 40px;
+            }
+
+            .section-text {
+                font-size: 21px;
+                margin-top: 14px;
+                margin-bottom: 44px;
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-404 {
+        .section-error {
+            padding-top: 60px;
+            padding-bottom: 60px;
+
+            &__container {
+                max-width: 330px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-text {
+                font-size: 18px;
+                margin-top: 20px;
+                margin-bottom: 34px;
+            }
+        }
+    }
+}
