@@ -103,6 +103,10 @@ a {
   display: none !important;
 }
 
+.main {
+    overflow-x: hidden;
+}
+
 @include breakpoint.tablet {
   .main {
     overflow: hidden;

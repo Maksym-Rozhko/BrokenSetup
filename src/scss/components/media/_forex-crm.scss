@@ -62,7 +62,7 @@
 
             &::after {
                 bottom: 160px;
-                left: -70px;
+                left: -30px;
             }
 
             .section-title {
@@ -204,7 +204,7 @@
 
             &::after {
                 bottom: 120px;
-                left: -57px;
+                left: -27px;
             }
 
             .item {
@@ -307,7 +307,6 @@
 
             &::after {
                 bottom: 100px;
-                left: -48px;
             }
 
             .item {
@@ -410,7 +409,7 @@
             }
 
             &::after {
-                left: -35px;
+                left: -20px;
             }
 
             .item {
@@ -554,7 +553,7 @@
 
             &::after {
                 bottom: 91px;
-                left: -50px;
+                left: -35px;
             }
 
             .item {
@@ -621,8 +620,14 @@
 @include breakpoint.mobile {
     .page-forex-crm {
         .main-screen {
+            padding-top: 40px;
             background-image: url('../images/forex-crm/main-screen/mobile.png');
-            background-size: 510px 400px;
+            background-size: contain;
+
+            .text {
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
         }
 
         .client-portal {
@@ -680,12 +685,12 @@
 
             &::before {
                 top: calc(50% - 300px);
-                right: -32px;
+                right: -22px;
             }
 
             &::after {
                 bottom: calc(50% - 300px);
-                left: -32px;
+                left: -10px;
             }
 
             .item {
@@ -725,14 +730,6 @@
                 max-width: 200px;
                 margin-bottom: 30px;
             }
-        }
-    }
-}
-
-@media (max-width: 402px) {
-    .page-forex-crm {
-        .main-screen {
-            background-size: contain;
         }
     }
 }

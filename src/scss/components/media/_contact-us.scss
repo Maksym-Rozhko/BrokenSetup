@@ -142,6 +142,10 @@
             .form {
                 &-group {
                     margin-bottom: 16px;
+
+                    &--top {
+                        margin-top: 16px;
+                    }
                 }
 
                 &-checkboxes {

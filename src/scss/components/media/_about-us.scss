@@ -157,6 +157,12 @@
                 h3 {
                     margin-top: 16px;
                 }
+
+                ul {
+                    li {
+                        line-height: 230%;
+                    }
+                }
             }
 
             .btn-main {
@@ -241,6 +247,20 @@
         .services {
             .section-text {
                 font-size: 21px;
+            }
+
+            .service {
+                ul {
+                    li {
+                        line-height: 180%;
+                        padding-left: 44px;
+
+                        &::before {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+                }
             }
         }
     }

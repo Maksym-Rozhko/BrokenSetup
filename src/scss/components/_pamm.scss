@@ -23,6 +23,10 @@
         &__container {
             .item {
                 background-color: var(--cs-bg-light-3);
+
+                p {
+                    max-width: inherit;
+                }
             }
         }
     }

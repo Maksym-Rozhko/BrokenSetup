@@ -17,6 +17,16 @@
             }
         }
 
+        .benefits {
+            &__container {
+                .item {
+                    p {
+                        max-width: inherit;
+                    }
+                }
+            }
+        }
+
         .design {
             padding-bottom: 160px;
 

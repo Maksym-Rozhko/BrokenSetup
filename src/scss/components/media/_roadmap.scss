@@ -4,6 +4,8 @@
 @media (max-width: 1920px) {
     .page-roadmap {
         .main-screen {
+            background-image: url('../images/roadmap/main-screen/desktop-l.png');
+
             &__container {
                 max-width: 720px;
             }
@@ -219,7 +221,7 @@
 @include breakpoint.big-desktop {
     .page-roadmap {
         .main-screen {
-            background-position: center right -20px;
+            background-image: url('../images/roadmap/main-screen/desktop-lx.png');
         }
 
         .about-roadmap {
@@ -414,6 +416,9 @@
 
 @include breakpoint.small-desktop {
     .page-roadmap {
+        .main-screen {
+            background-image: url('../images/roadmap/main-screen/desktop-lxs.png');
+        }
         .about-roadmap {
             padding-block: 100px;
 

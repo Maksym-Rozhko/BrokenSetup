@@ -203,6 +203,10 @@
         margin-inline: auto;
     }
 
+    .section-label {
+        text-transform: uppercase;
+    }
+
     &__container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -419,8 +423,10 @@
 }
 
 .above-footer {
+    position: relative;
     padding-block: 100px;
     background-color: var(--cs-bg-light-3);
+    z-index: 1;
 
     .logo-link {
         margin-bottom: 73px;
