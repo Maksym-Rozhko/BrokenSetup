@@ -482,6 +482,7 @@
                     max-width: inherit;
                     max-height: 292px;
                     min-height: 292px;
+                    object-fit: contain;
                 }
             }
         }
@@ -496,11 +497,5 @@
                 }
             }
         }
-    }
-}
-
-@media (max-width: 402px) {
-    .page-corporate-email {
-
     }
 }

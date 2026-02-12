@@ -4,7 +4,7 @@ function preloader(preloader) {
     if (loader) {
         setTimeout(() => {
             loader.classList.add('success');
-        }, 2500);
+        }, 1500);
         setTimeout(() => {
             loader.classList.add('remove');
         }, 3000);

@@ -14,12 +14,12 @@
 
     &.success {
         .check {
-            animation: drawCheck .5s ease forwards;
-            animation-delay: .2s;
+            animation: drawCheck .4s ease forwards;
+            animation-delay: .1s;
         }
 
         .icon {
-            animation: pop .4s ease forwards, haptic .18s linear .55s;
+            animation: pop .4s ease forwards;
         }
 
         .mask-rect {
@@ -109,13 +109,4 @@
     to {
         width: 32px;
     }
-}
-
-@keyframes haptic {
-    0%   { transform: translate(0,0); }
-    20%  { transform: translate(1px,0); }
-    40%  { transform: translate(-1px,0); }
-    60%  { transform: translate(1px,0); }
-    80%  { transform: translate(-1px,0); }
-    100% { transform: translate(0,0); }
 }

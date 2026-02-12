@@ -98,21 +98,30 @@
                 background-color: var(--cs-bg-light-9);
                 position: relative;
 
-                &::after {
+                a {
                     @include mini.flex-all-center;
-                    content: "";
                     position: absolute;
                     width: 69px;
                     height: 52px;
                     border-radius: 12px;
                     border: 2px solid var(--cs-text-3);
-                    background-color: var(--cs-text-3);
-                    background-image: url('../images/icon/arrow-narrow.svg');
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: auto;
+                    background-color: transparent;
                     right: 42px;
                     bottom: 40px;
+                    transition: all ease-in-out .4s;
+
+                    img {
+                        filter: invert(1);
+                        transition: all ease-in-out .4s;
+                    }
+
+                    &:hover {
+                        background-color: var(--cs-text-3);
+
+                        img {
+                            filter: invert(0);
+                        }
+                    }
                 }
 
                 &.step--2,

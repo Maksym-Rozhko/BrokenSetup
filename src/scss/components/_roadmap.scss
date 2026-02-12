@@ -276,23 +276,23 @@
 
                 .btn-main {
                     @include content.btn-main;
+                    @include content.btn-transparent-black;
                     border-radius: 70px;
                     max-width: 100px;
                     margin-left: auto;
-                    border: 2px solid transparent;
 
                     img {
+                        filter: invert(1);
                         transition: all ease-in-out .4s;
                     }
                 }
 
                 &:hover {
                     .btn-main {
-                        border-color: var(--cs-text);
-                        background: transparent;
+                        background: var(--cs-text-3);
 
                         img {
-                            filter: invert(1);
+                            filter: invert(0);
                         }
                     }
                 }

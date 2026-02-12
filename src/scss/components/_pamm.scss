@@ -111,7 +111,10 @@
         &--order {
             .ready-banner {
                 &__container {
-                    background: url('../images/home/ready/bg.jpg');
+                    background-image: url('../images/pamm/ready/bg.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
 
                     &::before {
                         content: none;

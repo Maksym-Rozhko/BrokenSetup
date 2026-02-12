@@ -78,8 +78,7 @@
     color: var(--cs-text-3);
 
     &:hover {
-        border-color: var(--cs-bg-light-8);
-        background: linear-gradient(135deg, #7156e1 0%, #281461 100%);
+        background: var(--cs-text-3);
         color: var(--cs-white);
     }
 }

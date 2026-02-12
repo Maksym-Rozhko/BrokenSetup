@@ -52,6 +52,10 @@
                 @include content.btn-transparent;
                 margin-right: auto;
                 align-self: flex-end;
+                padding: 0;
+                border: none;
+                min-height: inherit;
+                cursor: default;
 
                 img {
                     transform: rotate(90deg);
@@ -59,9 +63,8 @@
                 }
 
                 &:hover {
-                    img {
-                        filter: invert(1);
-                    }
+                    background: none;
+                    color: var(--cs-white);
                 }
             }
 
