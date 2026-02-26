@@ -17,6 +17,11 @@
 @use "./components/corporate-email";
 @use "./components/mt5";
 @use "./components/pamm";
+@use "./components/mt5-servers";
+@use "./components/business-plan";
+@use "./components/advisory-services";
+@use "./components/system-admin";
+@use "./components/mt5-setup";
 @use "./components/page-404";
 @use "./mixins/burger";
 
@@ -34,4 +39,9 @@
 @use "./components/media/corporate-email" as corporateEmail2;
 @use "./components/media/mt5" as mt52;
 @use "./components/media/pamm" as pamm2;
+@use "./components/media/mt5-servers" as mt5Servers2;
+@use "./components/media/business-plan" as businessPlan2;
+@use "./components/media/advisory-services" as advisoryServices2;
+@use "./components/media/system-admin" as systemAdmin2;
+@use "./components/media/mt5-setup" as mt5Setup2;
 @use "./components/media/page-404" as page-4042;

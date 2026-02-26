@@ -1,0 +1,203 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-business-plan {
+        .challenges {
+            padding-block: 160px;
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-business-plan {
+        .main-screen {
+            background-image: none;
+
+            &::after {
+                height: 150px;
+            }
+        }
+
+        .challenges {
+            padding-block: 120px;
+        }
+
+        .benefits {
+            .section-title {
+                margin-bottom: 24px;
+            }
+
+            .section-text {
+                margin-bottom: 40px;
+            }
+        }
+
+        .ready-banner {
+            &__container {
+                padding: 100px 25px;
+            }
+
+            .title {
+                max-width: inherit;
+            }
+
+            p {
+                max-width: 860px;
+                margin-inline: auto;
+                line-height: 150%;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-business-plan {
+        .challenges {
+            padding-block: 100px;
+
+            .section-title {
+                margin-top: 16px;
+            }
+
+            &__list {
+                gap: 40px 20px;
+            }
+
+            .item {
+                padding-left: 44px;
+
+                &::before {
+                    width: 28px;
+                    height: 28px;
+                    background-size: 20px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-business-plan {
+        .main-screen {
+            padding-block: 80px;
+            min-height: inherit;
+
+            img {
+                border-radius: 12px;
+            }
+
+            &::after {
+                height: 150px;
+            }
+        }
+
+        .challenges {
+            padding-block: 80px;
+
+            .item {
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-business-plan {
+        .main-screen {
+            padding-block: 60px;
+            padding-bottom: 0;
+
+            &::after {
+                height: 52px;
+            }
+        }
+        .design {
+            .section-label,
+            .section-text,
+            .section-title {
+                text-align: left;
+            }
+
+            .section-title,
+            .btn-main {
+                margin-left: 0;
+            }
+
+            img {
+                display: block;
+            }
+        }
+
+        .challenges {
+            padding-block: 60px;
+
+            &__container {
+                flex-direction: column;
+            }
+
+            .section-title {
+                margin-block: 10px;
+            }
+
+            &__list {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .item {
+                h3 {
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .ready-banner {
+            &__container {
+                padding: 46px 10px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .btn-main {
+                max-width: 280px;
+                text-align: center;
+                justify-content: center;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-business-plan {
+        .main-screen {
+            .text {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}

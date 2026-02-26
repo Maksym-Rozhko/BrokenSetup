@@ -1,0 +1,318 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-system-admin {
+        .main-screen {
+            background-position: 60%;
+        }
+
+        .what-we-do {
+            padding-block: 160px;
+        }
+
+        .ready-banner {
+            &--image {
+                .ready-banner {
+                    &__container {
+                        padding-left: 55px;
+                        padding-right: 60px;
+                    }
+                }
+
+                .title {
+                    font-size: 48px;
+                }
+
+                p {
+                    font-size: 24px;
+                }
+
+                img {
+                    max-width: 524px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-system-admin {
+        .main-screen {
+            background-image: url('../images/system-admin/main-screen/desktop.jpg');
+            background-position: 60%;
+
+            &__container {
+                max-width: 500px;
+            }
+        }
+
+        .what-we-do {
+            padding-block: 120px;
+
+            .section-title {
+                margin-bottom: 16px;
+            }
+
+            &__list {
+                gap: 30px;
+            }
+
+            .item {
+                h3 {
+                    font-size: 24px;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .ready-banner {
+            &--image {
+                .ready-banner {
+                    &__container {
+                        padding-inline: 40px;
+                    }
+                }
+
+                .title {
+                    font-size: 40px;
+                }
+
+                img {
+                    max-width: 424px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-system-admin {
+        .what-we-do {
+            padding-block: 100px;
+
+            .content {
+                max-width: 400px;
+            }
+
+            &__list {
+                gap: 30px 15px;
+            }
+
+            .item {
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .ready-banner {
+            &--image {
+                .title {
+                    font-size: 36px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-system-admin {
+        .main-screen {
+            min-height: 840px;
+        }
+
+        .what-we-do {
+            padding-block: 80px;
+
+            &__container {
+                flex-direction: column;
+            }
+
+            .content {
+                max-width: inherit;
+            }
+
+            &__list {
+                gap: 30px;
+            }
+        }
+
+        .ready-banner {
+            &--image {
+                img {
+                    max-width: 360px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-system-admin {
+        .main-screen {
+            padding-block: 60px;
+            min-height: 621px;
+            justify-content: flex-start;
+            text-align: center;
+            background-image: url('../images/system-admin/main-screen/mobile.jpg');
+            background-position: 50%;
+            background-size: cover;
+
+            &__container {
+                max-width: inherit;
+            }
+
+            .title {
+                max-width: inherit;
+            }
+
+            .text {
+                max-width: inherit;
+            }
+
+            .btn-main {
+                margin-inline: auto;
+            }
+        }
+
+        .design {
+            .section-label,
+            .section-title,
+            .section-text {
+                text-align: left;
+            }
+            .section-title {
+                margin-left: 0;
+                max-width: inherit;
+
+                br {
+                    display: none;
+                }
+            }
+            img {
+                display: block;
+            }
+            .btn-main {
+                margin-left: 0;
+            }
+        }
+
+        .what-we-do {
+            &__list {
+                display: flex;
+                overflow-x: auto;
+                margin-right: -40px;
+                padding-right: -40px;
+            }
+
+            .item {
+                min-width: 325px;
+            }
+        }
+
+        .ready-banner {
+            &--image {
+                .ready-banner {
+                    &__container {
+                        padding-inline: 0;
+                        padding-top: 10px;
+                        padding-bottom: 60px;
+                        gap: 0;
+                    }
+                }
+
+                .content {
+                    max-width: inherit;
+                }
+
+                p {
+                    text-align: center;
+                    max-width: 382px;
+                }
+
+                .btn-main {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-system-admin {
+        .main-screen {
+            background-position: 60%;
+        }
+
+        .what-we-do {
+            padding-block: 60px;
+
+            &__container {
+                gap: 30px;
+            }
+
+            .section-title {
+                margin-block: 10px;
+            }
+
+            &__list {
+                margin-right: -16px;
+                padding-right: -16px;
+                gap: 20px;
+            }
+
+            .item {
+                min-width: 280px;
+
+                .icon {
+                    width: 52px;
+                    height: 52px;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .ready-banner {
+            &--image {
+                .content {
+                    padding-inline: 10px;
+                }
+
+                .title {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 16px;
+                    max-width: 342px;
+                }
+            }
+        }
+    }
+}

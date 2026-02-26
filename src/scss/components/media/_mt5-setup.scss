@@ -1,0 +1,132 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-mt5-setup {
+        .main-screen {
+            .text {
+                max-width: 620px;
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-mt5-setup {
+        .main-screen {
+            background-image: url('../images/mt5-setup/main-screen/desktop.jpg');
+            background-position: right;
+
+            &__container {
+                max-width: inherit;
+            }
+
+            .text {
+                max-width: 550px;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-mt5-setup {
+        .design {
+            &--group {
+                .design {
+                    &__container {
+                        &:not(:first-child) {
+                            margin-top: 80px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-mt5-setup {
+        .main-screen {
+            padding-block: 100px;
+            min-height: 740px;
+
+            .title {
+                max-width: inherit;
+            }
+        }
+
+        .approach {
+            &__container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+        }
+
+        .design {
+            &--group {
+                .design {
+                    &__container {
+                        &:not(:first-child) {
+                            margin-top: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-mt5-setup {
+        .main-screen {
+            background-image: url('../images/mt5-setup/main-screen/mobile.jpg');
+        }
+
+        .design {
+            .section-label,
+            .section-title,
+            .section-text {
+                text-align: left;
+            }
+
+            .section-title,
+            .btn-main {
+                margin-left: 0;
+            }
+
+            img {
+                display: block;
+            }
+
+            &--group {
+                .design {
+                    &__container {
+                        &:not(:first-child) {
+                            margin-top: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-mt5-setup {
+        .main-screen {
+            padding-block: 60px;
+            min-height: 620px;
+        }
+        .design {
+            &--group {
+                .design {
+                    &__container {
+                        &:not(:first-child) {
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

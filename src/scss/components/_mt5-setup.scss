@@ -1,0 +1,65 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-mt5-setup {
+    .main-screen {
+        background-image: url('../images/mt5-setup/main-screen/desktop.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-block: 100px;
+        text-align: center;
+
+        &__container {
+            max-width: inherit;
+        }
+
+        .text {
+            max-width: 710px;
+            margin-inline: auto;
+        }
+
+        .btn-main {
+            margin-inline: auto;
+        }
+    }
+
+    .design {
+        .content {
+            max-width: 740px;
+        }
+
+        &--group {
+            .design {
+                &__container {
+                    &:not(:first-child) {
+                        margin-top: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    .approach {
+        background-color: var(--cs-bg-light-3);
+
+        .section-text {
+            max-width: inherit;
+        }
+
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px 40px;
+        }
+
+        .item {
+            text-align: center;
+        }
+
+        .ready-banner {
+            .btn-main {
+                justify-content: center;
+            }
+        }
+    }
+}

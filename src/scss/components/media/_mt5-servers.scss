@@ -1,0 +1,474 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-mt5-servers {
+        .main-screen {
+            .text {
+                margin-bottom: 40px;
+            }
+
+            .form {
+                margin-bottom: 380px;
+            }
+        }
+
+        .design {
+            padding-block: 160px;
+        }
+
+        .process {
+            padding-block: 160px;
+
+            .section-text {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-mt5-servers {
+        .main-screen {
+            background-image: url('../images/mt5-servers/main-screen/desktop.png');
+            background-size: cover;
+            padding-block: 80px;
+            min-height: 840px;
+
+            &__container {
+                max-width: 720px;
+            }
+
+            .title {
+                font-size: 40px;
+            }
+
+            .text {
+                margin-top: 24px;
+            }
+        }
+
+        .design {
+            padding-block: 120px;
+
+
+            &--list {
+                &-reverse {
+                    .design {
+                        &__container {
+                            gap: 60px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .setup {
+            &__container {
+                .item {
+                    .icon {
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .process {
+            padding-block: 120px;
+
+            .section-title {
+                margin-top: 16px;
+            }
+
+            .section-text {
+                margin-bottom: 30px;
+            }
+
+            &__container {
+                gap: 20px;
+            }
+
+            .item {
+                span {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                h3 {
+                    font-size: 24px;
+                    margin-top: 16px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .ready-banner {
+            &__container {
+                padding: 100px 20px;
+            }
+            .title {
+                font-size: 48px;
+                max-width: 610px;
+            }
+
+            &__wrap {
+                margin-right: auto;
+                max-width: 400px;
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-mt5-servers {
+        .main-screen {
+            min-height: 740px;
+
+            .form {
+                max-width: 510px;
+
+                &__input {
+                    min-height: 64px;
+                }
+
+                .btn-main {
+                    min-height: 48px;
+                    right: 8px;
+                    font-size: 16px;
+                    padding: 14px;
+                    max-width: 181px;
+                    min-width: 181px;
+                }
+            }
+        }
+
+        .design {
+            padding-block: 100px;
+
+            &--list {
+                .section-title {
+                    margin-block: 16px;
+                }
+
+                .section-text {
+                    margin-bottom: 30px;
+                }
+
+                ul {
+                    li {
+                        font-size: 20px;
+                        padding-left: 44px;
+
+                        &:not(:last-child) {
+                            margin-bottom: 20px;
+                        }
+
+                        &::before {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+                }
+
+                &-reverse {
+                    .design {
+                        &__container {
+                            gap: 40px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .process {
+            padding-block: 100px;
+
+            .item {
+                h3 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .ready-banner {
+            &__container {
+                padding: 90px 20px;
+            }
+            .title {
+                font-size: 40px;
+                max-width: 510px;
+            }
+
+            &__wrap {
+                margin-right: auto;
+                max-width: 400px;
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-mt5-servers {
+        .main-screen {
+            min-height: 1040px;
+        }
+
+        .process {
+            &__container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-mt5-servers {
+        .main-screen {
+            padding-block: 130px;
+
+            &__container {
+                max-width: 450px;
+            }
+
+            .title {
+                font-size: 36px;
+            }
+
+            .text {
+                font-size: 18px;
+                margin-top: 16px;
+            }
+        }
+
+        .design {
+            padding-block: 60px;
+
+            .section-label,
+            .section-title,
+            .section-text {
+                text-align: center;
+            }
+
+            .section-title {
+                max-width: 480px;
+                margin-inline: auto;
+                margin-block: 10px;
+            }
+
+            .section-text {
+                margin-bottom: 30px;
+            }
+
+            img {
+                display: none;
+            }
+
+            .content {
+                img {
+                    display: block;
+                }
+            }
+
+            .btn-main {
+                margin-top: 30px;
+                margin-inline: auto;
+            }
+
+            &--list {
+                .content {
+                    margin-right: auto;
+                }
+
+                .section-title {
+                    margin-left: 0;
+                }
+
+                .section-label,
+                .section-title,
+                .section-text {
+                    text-align: left;
+                }
+
+                .section-text {
+                    br {
+                        display: none;
+                    }
+                }
+
+                img {
+                    display: block;
+                }
+
+                ul {
+                    li {
+                        font-size: 18px;
+                    }
+                }
+
+                &-reverse {
+                    .design {
+                        &__container {
+                            flex-direction: column-reverse;
+                            gap: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .setup {
+            &__container {
+                display: none;
+            }
+
+            &-slider {
+                display: block;
+                padding-bottom: 30px;
+
+                &__controls {
+                    margin-top: 30px;
+                    position: static;
+                    display: block;
+                    font-size: 24px;
+                    line-height: 150%;
+                    letter-spacing: -0.03em;
+                    text-align: center;
+                    font-weight: 700;
+                    color: var(--cs-text-3);
+
+                    .swiper-pagination-total {
+                        font-weight: 400;
+                        color: var(--cs-brand-main);
+                    }
+                }
+            }
+        }
+
+        .process {
+            padding-block: 60px;
+
+            &__container {
+                display: none;
+            }
+
+            .btn-main {
+                display: none;
+            }
+
+            .itme {
+                span {
+                    width: 60px;
+                    height: 60px;
+                    font-size: 18px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                    margin-top: 20px;
+                    margin-bottom: 12px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            &-slider {
+                display: block;
+
+                .btn-main {
+                    display: flex;
+                    margin-top: 30px;
+                }
+            }
+        }
+
+        .ready-banner {
+            &__container {
+                flex-direction: column;
+                padding: 80px 20px;
+            }
+
+            .title {
+                text-align: center;
+                margin-inline: auto;
+            }
+
+            &__wrap {
+                margin-inline: auto;
+                max-width: inherit;
+
+                p {
+                    text-align: center;
+                    max-width: inherit;
+                }
+
+                .btn-main {
+                    margin-inline: auto;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-mt5-servers {
+        .main-screen {
+            background-image: url('../images/mt5-servers/main-screen/mobile.png');
+            min-height: 620px;
+            padding-top: 60px;
+            padding-bottom: 90px;
+
+            .title {
+                font-size: 30px;
+            }
+
+            .text {
+                font-size: 16px;
+                margin-top: 10px;
+                margin-bottom: 30px;
+            }
+
+            .form {
+                margin-bottom: 40px;
+
+                &-group {
+                    margin-bottom: 20px;
+                }
+                .btn-main {
+                    margin-top: 30px;
+                    font-size: 18px;
+                    min-height: 60px;
+                    max-width: inherit;
+                }
+            }
+        }
+
+        .ready-banner {
+            &__container {
+                padding: 62px 17px;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+
+            &__wrap {
+                p {
+                    text-align: center;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,151 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-business-plan {
+    .main-screen {
+        background-image: none;
+        background-color: var(--cs-bg-light-3);
+        min-height: inherit;
+
+        img {
+            max-height: 620px;
+        }
+    }
+
+    .challenges {
+        background-color: var(--cs-bg-light-3);
+        padding-block: 200px;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .content {
+            max-width: 547px;
+        }
+
+        .section-label {
+            text-transform: uppercase;
+        }
+
+        .section-label,
+        .section-text,
+        .section-title {
+            text-align: left;
+        }
+
+        .section-title {
+            margin-block: 24px;
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 868px;
+        }
+
+        .item {
+            padding-left: 54px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 38px;
+                height: 38px;
+                background-image: url('../images/icon/cross-3.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: auto;
+                left: 0;
+                top: 0;
+                border-radius: 6px;
+                background-color: #a2b5cb;
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 150%;
+                letter-spacing: -0.02em;
+                margin-top: 0;
+                margin-bottom: 18px;
+                color: var(--cs-text-3);
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 150%;
+                letter-spacing: -0.02em;
+                color: var(--cs-text-4);
+                margin-block: 0;
+            }
+        }
+    }
+
+    .benefits {
+        background-color: transparent;
+
+        .section-title {
+            margin-block: 24px;
+        }
+
+        .section-text {
+            margin-bottom: 50px;
+        }
+
+        &__container {
+            .item {
+                background-color: var(--cs-bg-light-3);
+                box-shadow: none;
+            }
+        }
+    }
+
+    .design {
+        &--list {
+            background-color: var(--cs-bg-light-3);
+
+            .section-title {
+                max-width: inherit;
+            }
+        }
+    }
+
+    .process {
+        background-color: transparent;
+    }
+
+    .ready-banner {
+        padding-top: 0;
+
+        &__container {
+            padding: 136px 36px;
+            display: block;
+        }
+
+        .title {
+            font-size: 70px;
+            margin-left: auto;
+            max-width: inherit;
+            text-align: center;
+        }
+
+        p {
+            max-width: 860px;
+            margin-inline: auto;
+            line-height: 150%;
+        }
+
+        .btn-main {
+            max-width: 280px;
+            text-align: center;
+            justify-content: center;
+            padding-left: 10px;
+        }
+    }
+}

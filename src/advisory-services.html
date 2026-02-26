@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@include('partials/head.html')
+
+<body>
+    <!-- <div class="preloader">
+        <div class="preloader__container">
+            <div class="icon">
+                <img src="./images/icon/preloader-icon.svg" alt="preloader icon">
+                <svg class="success-check" width="32" height="24" viewBox="0 0 32 24">
+                    <defs>
+                        <mask id="check-mask">
+                            <rect x="0" y="0" width="0" height="24" fill="white" class="mask-rect"/>
+                        </mask>
+                    </defs>
+                    <path
+                        d="M27.2737 0L11.2798 15.9939L3.8675 8.58265L0 12.4491L11.2798 23.7278L31.1412 3.86641L27.2737 0Z"
+                        fill="white"
+                        mask="url(#check-mask)"
+                    />
+                </svg>
+            </div>
+            <div class="preloader__line">
+                <img src="./images/icon/preloader-icon-running.svg" alt="preloader icon running">
+            </div>
+        </div>
+    </div> -->
+    @include('partials/header.html')
+    <main class="main">
+        @include('partials/advisory-services.html')
+        @include('partials/above-footer.html')
+    </main>
+    <button type="button" class="btn-reset scroll-top d-none">
+        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <div class="graph-modal">
+        <div class="graph-modal__container modal-form" role="dialog" aria-modal="true" data-graph-target="modalForm">
+            <div class="graph-modal__content">
+                <button class="btn-reset graph-modal__close" aria-label="Закрыть модальное окно">
+                    <img src="./images/icon/cross.svg" alt="cross icon">
+                </button>
+                <h4 class="graph-modal__title">
+                    Ready to Start your Forex Broker?
+                </h4>
+                <p class="graph-modal__text">
+                    Talk to our team about launching or scaling your forex brokerage.
+                </p>
+                <form class="form u-form" id="uForm_1" action="#" enctype="multipart/form-data" method="POST">
+                    <input class="uForm__extended" name="nospam" type="text" value="uform-empty" required="">
+                    <input class="uForm__extended" name="Текст" type="hidden" value="Schedule a call from BrokenSetup">
+                    <div class="uForm__error-msg" id="uForm__error-msg_1"></div>
+                    <div class="form-group">
+                        <label>YOUR NAME</label>
+                        <input class="form__input form-control" id="name1" type="text" name="name" placeholder="Full Name" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>YOUR TELEGRAM OR WHATSAPP</label>
+                        <input type="hidden" name="full_phone" id="fullPhone1">
+                        <input class="form__input form-control" id="phone1" type="tel" name="phone" placeholder="Enter your phone" required>
+                    </div>
+                    <div class="form-group ">
+                        <label>TELL US MORE</label>
+                        <textarea class="form__input form-control" id="comment1" name="comment" placeholder="Tell us a little about the project..."></textarea>
+                    </div>
+                    <button id="uForm__submit_1" class="btn-reset btn-main" type="submit">
+                        Schedule а Call
+                        <div id="uForm__preload_1" class="uForm__preload"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="graph-modal__container modal-success" role="dialog" aria-modal="true" data-graph-target="modalSuccess">
+            <div class="graph-modal__content">
+                <img src="./check-anim.gif" alt="check animation gif">
+                <h4 class="graph-modal__title">
+                    Thank you! We got your request.
+                </h4>
+                <p class="graph-modal__text">
+                    Our team will contact you shortly.
+                </p>
+                <a href="/" class="btn-main">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
