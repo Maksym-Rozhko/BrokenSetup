@@ -535,7 +535,6 @@
         .main-screen {
             background-image: url('../images/roadmap/main-screen/mobile.png');
             background-position: center bottom 32px;
-            background-size: auto;
 
             .text {
                 max-width: 400px;
@@ -728,7 +727,7 @@
     .page-roadmap {
         .main-screen {
             background-image: url('../images/roadmap/main-screen/mobile-x.png');
-            background-position: center bottom 100px;
+            background-position: center bottom;
 
             .title {
                 font-size: 36px;
@@ -935,8 +934,7 @@
     .page-roadmap {
         .main-screen {
             background-image: url('../images/roadmap/main-screen/mobile-xs.png');
-            background-size: contain;
-            background-position: center bottom;
+            background-position: center;
 
 
             .title {
@@ -1059,8 +1057,7 @@
 @media (max-width: 402px) {
     .page-roadmap {
         .main-screen {
-            background-position: center bottom 50px;
-            background-size: auto;
+            background-position: center bottom -50px;
         }
     }
 }

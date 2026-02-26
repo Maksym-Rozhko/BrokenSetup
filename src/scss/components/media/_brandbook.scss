@@ -5,8 +5,6 @@
 @media (max-width: 1920px) {
     .page-brandbook {
         .main-screen {
-            background-size: cover;
-
             &__container {
                 max-width: 960px;
             }
@@ -163,7 +161,6 @@
     .page-brandbook {
         .main-screen {
             background-image: url('../images/brandbook/main-screen/laptop.png');
-            background-size: contain;
             padding-top: 172px;
             padding-bottom: 40px;
 
@@ -441,7 +438,6 @@
 @include breakpoint.small-desktop {
     .page-brandbook {
         .main-screen {
-            background-size: cover;
             padding-top: 204px;
 
             .text {
@@ -803,7 +799,7 @@
     .page-brandbook {
         .main-screen {
             background-image: url('../images/brandbook/main-screen/tablet-x.png');
-            background-size: contain;
+            background-position: center left 50px;
             padding-top: 200px;
             min-height: 1040px;
 
@@ -1037,6 +1033,8 @@
     .page-brandbook {
         .main-screen {
             background-image: url('../images/brandbook/main-screen/mobile.png');
+            background-position: center;
+            background-size: contain;
             padding-top: 100px;
             padding-bottom: 25px;
             min-height: inherit;
@@ -1236,9 +1234,10 @@
     }
 }
 
-@media (max-width: 402px) {
+@media (max-width: 420px) {
     .page-brandbook {
         .main-screen {
+            background-size: cover;
         }
     }
 }
