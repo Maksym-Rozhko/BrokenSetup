@@ -234,10 +234,11 @@
 @include breakpoint.small-tablet {
     .page-mt5-servers {
         .main-screen {
+            background-position: center;
             padding-block: 130px;
 
             &__container {
-                max-width: 450px;
+                max-width: inherit;
             }
 
             .title {
