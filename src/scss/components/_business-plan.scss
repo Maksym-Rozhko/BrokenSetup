@@ -85,6 +85,37 @@
                 margin-block: 0;
             }
         }
+
+        &--dots {
+            .challenges {
+                &__list {
+                    max-width: 912px;
+                    width: 100%;
+                }
+            }
+
+            .item {
+                padding-left: 36px;
+
+                &::before {
+                    top: 8px;
+                    width: 20px;
+                    height: 20px;
+                    background: var(--cs-text-4);
+                    border-radius: 50%;
+                }
+            }
+
+            &-accent {
+                background-color: transparent;
+
+                .item {
+                    &::before {
+                        background: var(--cs-brand-main);
+                    }
+                }
+            }
+        }
     }
 
     .benefits {

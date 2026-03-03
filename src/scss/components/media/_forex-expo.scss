@@ -1,0 +1,284 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-forex-expo {
+        .main-screen {
+            .text {
+                max-width: 620px;
+            }
+        }
+    }
+
+    .customization {
+        padding-block: 160px;
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-forex-expo {
+        .main-screen {
+            background-image: url('../images/forex-expo/main-screen/desktop.jpg');
+            background-position: center;
+
+            &__container {
+                max-width: inherit;
+            }
+
+            .text {
+                max-width: 550px;
+            }
+        }
+    }
+
+    .customization {
+        padding-block: 140px;
+
+        .section-text {
+            margin-bottom: 40px;
+        }
+
+        &__container {
+            gap: 40px;
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-forex-expo {
+        .approach {
+            .btn-main {
+                margin-top: 40px;
+            }
+        }
+
+        .ready-banner {
+            &--left {
+                .ready-banner {
+                    &__container {
+                        background-position: left;
+                        padding-top: 90px;
+                        padding-bottom: 58px;
+                        padding-inline: 48px;
+                    }
+                }
+
+                .btn-main {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .customization {
+        padding-block: 120px;
+
+        .item {
+            h3 {
+                font-size: 20px;
+            }
+
+            &__group {
+                gap: 8px;
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-forex-expo {
+        .main-screen {
+            padding-block: 80px;
+            min-height: 740px;
+
+            .title {
+                max-width: inherit;
+            }
+        }
+
+        .approach {
+            &__container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+        }
+
+        .ready-banner {
+            &--left {
+                .ready-banner {
+                    &__container {
+                        padding-top: 70px;
+                        padding-bottom: 70px;
+                        padding-inline: 48px;
+                    }
+                }
+            }
+        }
+    }
+
+    .customization {
+        padding-block: 100px;
+
+        &__container {
+            gap: 40px 20px;
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-forex-expo {
+        .main-screen {
+            background-image: url('../images/forex-expo/main-screen/mobile.jpg');
+            background-position: center bottom;
+        }
+
+        .design {
+            .section-label,
+            .section-title,
+            .section-text {
+                text-align: center;
+            }
+
+            .section-title,
+            .btn-main {
+                margin-left: auto;
+            }
+
+            img {
+                display: block;
+            }
+
+            &__container {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .ready-banner {
+            &--left {
+                .ready-banner {
+                    &__container {
+                        background-image: url('../images/forex-expo/ready/mobile.jpg');
+                        background-position: center;
+                        padding-block: 58px;
+                        padding-inline: 17px;
+                    }
+                }
+
+                p {
+                    max-width: 442px;
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                .btn-main {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+
+    .customization {
+        padding-block: 80px;
+
+        &__container {
+            display: none;
+        }
+
+        &-slider {
+            display: block;
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-forex-expo {
+        .main-screen {
+            padding-block: 60px;
+            min-height: 620px;
+
+            .text {
+                max-width: 362px;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .design {
+            img {
+                min-height: 290px;
+                max-height: 290px;
+            }
+        }
+
+        .approach {
+            .section-text {
+                br {
+                    display: none;
+                }
+            }
+
+            .item {
+                .icon {
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+
+        .process {
+            .section-text {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .ready-banner {
+            &--left {
+                p {
+                    font-size: 16px;
+                    max-width: 342px;
+                }
+            }
+        }
+    }
+
+    .customization {
+        padding-block: 60px;
+
+        .section-title {
+            margin-block: 10px;
+        }
+
+        .section-text {
+            margin-bottom: 24px;
+
+            br {
+                display: none;
+            }
+        }
+
+        .item {
+            img {
+                border-radius: 12px;
+                min-height: 290px;
+            }
+
+            h3 {
+                font-size: 18px;
+                margin-top: 12px;
+                margin-bottom: 14px;
+            }
+
+            &__group {
+                gap: 12px;
+            }
+        }
+    }
+}

@@ -22,6 +22,7 @@
 @use "./components/advisory-services";
 @use "./components/system-admin";
 @use "./components/mt5-setup";
+@use "./components/forex-expo";
 @use "./components/page-404";
 @use "./mixins/burger";
 
@@ -44,4 +45,5 @@
 @use "./components/media/advisory-services" as advisoryServices2;
 @use "./components/media/system-admin" as systemAdmin2;
 @use "./components/media/mt5-setup" as mt5Setup2;
+@use "./components/media/forex-expo" as forexExpo;
 @use "./components/media/page-404" as page-4042;

@@ -58,3 +58,14 @@ new Swiper('.swiper.approach-slider', {
     type: 'fraction',
   },
 });
+
+new Swiper('.swiper.customization-slider', {
+  slidesPerView: 1,
+  speed: 1000,
+  spaceBetween: 30,
+
+  pagination: {
+    el: '.customization .customization-slider__controls.swiper-pagination',
+    type: 'fraction',
+  },
+});
