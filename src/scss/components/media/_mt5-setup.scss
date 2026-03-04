@@ -128,5 +128,13 @@
                 }
             }
         }
+
+        .ready-banner {
+            &--bottom {
+                .title {
+                    max-width: 220px;
+                }
+            }
+        }
     }
 }

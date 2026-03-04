@@ -455,6 +455,14 @@
             }
         }
 
+        .process {
+            .section-text {
+                br {
+                    display: none;
+                }
+            }
+        }
+
         .ready-banner {
             &__container {
                 padding: 62px 17px;
