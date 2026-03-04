@@ -424,7 +424,8 @@
 
 .above-footer {
     position: relative;
-    padding-block: 100px;
+    padding-top: 100px;
+    padding-bottom: 40px;
     background-color: var(--cs-bg-light-3);
     z-index: 1;
 
@@ -548,5 +549,9 @@
                 }
             }
         }
+    }
+
+    .socials {
+        @include content.socials
     }
 }

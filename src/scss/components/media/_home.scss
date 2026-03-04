@@ -680,7 +680,7 @@
     }
 
     .above-footer {
-        padding-block: 80px;
+        padding-top: 80px;
 
         .logo-link {
             margin-bottom: 53px;
@@ -819,7 +819,8 @@
     }
 
     .above-footer {
-        padding-block: 60px;
+        padding-top: 60px;
+        padding-bottom: 30px;
 
         .logo-link {
             margin-bottom: 0;
@@ -876,6 +877,15 @@
                             font-size: 16px;
                         }
                     }
+                }
+            }
+        }
+
+        .socials {
+            &__link {
+                .icon {
+                    width: 40px;
+                    height: 40px;
                 }
             }
         }
@@ -1049,6 +1059,10 @@
                     }
                 }
             }
+        }
+
+        .socials {
+            margin-top: 40px;
         }
     }
 }

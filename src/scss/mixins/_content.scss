@@ -244,24 +244,24 @@
 }
 
 @mixin socials {
-    @include mini.flex-all-sb;
-    gap: 50px;
-    max-width: 390px;
-    margin: 0 auto;
+    @include mini.flex-v-center;
+    gap: 20px;
+    max-width: 300px;
 
     &__link {
+        border-radius: 50%;
+        background-color: var(--cs-brand-main);
+        transition: all ease-in-out .4s;
+
         .icon {
             display: block;
+            fill: var(--cs-white);
             width: 60px;
             height: 60px;
-            fill: #8F4DED;
-            transition: all ease-in-out .4s;
         }
 
         &:hover {
-            .icon {
-                fill: #6B2AC8;
-            }
+            background-color: var(--cs-brand-main-hover);
         }
     }
 }
