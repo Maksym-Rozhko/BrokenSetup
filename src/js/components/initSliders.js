@@ -69,3 +69,14 @@ new Swiper('.swiper.customization-slider', {
     type: 'fraction',
   },
 });
+
+new Swiper('.swiper.what-we-do-slider', {
+  slidesPerView: 1,
+  speed: 1000,
+  spaceBetween: 30,
+
+  pagination: {
+    el: '.what-we-do-slider .what-we-do-slider__controls.swiper-pagination',
+    type: 'fraction',
+  },
+});

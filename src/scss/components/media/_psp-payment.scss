@@ -1,0 +1,226 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-psp-payment {
+        .main-screen {
+            &__container {
+                max-width: 600px;
+            }
+        }
+        .what-we-do {
+            .content {
+                max-width: 635px;
+            }
+        }
+
+        .ready-banner {
+            &--image {
+                img {
+                    max-width: 600px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-psp-payment {
+        .main-screen {
+            background-image: url('../images/psp-payment/main-screen/desktop.jpg');
+
+            &__container {
+                max-width: 500px;
+            }
+        }
+
+        .design {
+            .content {
+                max-width: 550px;
+            }
+        }
+
+        .ready-banner {
+            &--image {
+                img {
+                    max-width: 500px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-psp-payment {
+        .what-we-do {
+            .content {
+                max-width: 500px;
+            }
+        }
+
+        .design {
+            &--list {
+                ul {
+                    gap: 20px;
+
+                    li {
+                        &:not(:last-child) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-psp-payment {
+        .main-screen {
+            min-height: 840px;
+        }
+
+        .design {
+            &--list {
+                ul {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+        .ready-banner {
+            &--image {
+                img {
+                    max-width: 360px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-psp-payment {
+        .main-screen {
+            padding-block: 60px;
+            min-height: 710px;
+            justify-content: flex-start;
+            text-align: center;
+            background-image: url('../images/psp-payment/main-screen/mobile.jpg');
+            background-position: 50%;
+            background-size: cover;
+
+            &__container {
+                max-width: inherit;
+            }
+
+            .title {
+                max-width: inherit;
+            }
+
+            .text {
+                max-width: inherit;
+            }
+
+            .btn-main {
+                margin-inline: auto;
+            }
+        }
+
+        .design {
+            .content {
+                max-width: inherit;
+            }
+
+            &--list {
+                .section-title {
+                    br {
+                        display: block;
+                    }
+                }
+
+                .design {
+                    &__container {
+                        gap: 24px;
+                    }
+                }
+            }
+        }
+
+        .what-we-do {
+            &__list {
+                display: none;
+            }
+
+            &-slider {
+                display: block;
+            }
+
+            .content {
+                max-width: 440px;
+            }
+
+            .item {
+                min-width: inherit;
+            }
+        }
+
+        .ready-banner {
+            &--image {
+                .content {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-psp-payment {
+        .main-screen {
+            background-position: center;
+        }
+
+        .what-we-do {
+            .content {
+                max-width: 380px;
+            }
+        }
+
+        .design {
+            &--list {
+                &-bottom {
+                    .section-title {
+                        max-width: 350px;
+                    }
+                }
+            }
+        }
+
+        .process {
+            &--bottom {
+                .section-title {
+                    max-width: 360px;
+                    margin-inline: auto;
+                }
+            }
+        }
+
+        .ready-banner {
+            &--image {
+                padding-top: 80px;
+
+                .ready-banner {
+                    &__container {
+                        padding-top: 50px;
+                        padding-bottom: 84px;
+                    }
+                }
+
+
+                .content {
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
+}

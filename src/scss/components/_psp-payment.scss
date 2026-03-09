@@ -1,0 +1,138 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-psp-payment {
+    .main-screen {
+        min-height: 1000px;
+        padding-block: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url('../images/psp-payment/main-screen/desktop.jpg');
+        background-position: center right;
+        background-size: cover;
+
+        .text {
+            max-width: 764px;
+        }
+    }
+
+    .design {
+        .content {
+            max-width: 700px;
+        }
+        img {
+            max-width: 780px;
+        }
+
+        &--list {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px 40px;
+
+                li {
+                    @include mini.flex-v-center;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &-bottom {
+                .content {
+                    max-width: 788px;
+                }
+            }
+        }
+    }
+
+    .what-we-do {
+        .section-label,
+        .section-title,
+        .section-text {
+            text-align: center;
+        }
+
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+
+        &__list {
+            max-width: inherit;
+            gap: 50px 1px;
+        }
+
+        .content {
+            max-width: 710px;
+        }
+
+        .item {
+            @include mini.flex-all-center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &-slider {
+            display: none;
+            margin-top: 24px;
+
+            &__controls {
+                margin-top: 30px;
+                position: static;
+                display: block;
+                font-size: 24px;
+                line-height: 150%;
+                letter-spacing: -0.03em;
+                text-align: center;
+                font-weight: 700;
+                color: var(--cs-text-3);
+
+                .swiper-pagination-total {
+                    font-weight: 400;
+                    color: var(--cs-brand-main);
+                }
+            }
+
+            .item {
+                min-width: inherit;
+            }
+        }
+    }
+
+    .process {
+        &__container {
+            gap: 32px;
+        }
+    }
+
+    .ready-banner {
+        &--image {
+            .ready-banner {
+                &__container {
+                    padding-block: 49px;
+                }
+            }
+
+            .content {
+                max-width: 700px;
+                margin-right: auto;
+            }
+
+            img {
+                max-width: 660px;
+            }
+
+            .title {
+                font-size: 70px;
+            }
+
+            p {
+                font-size: 24px;
+            }
+        }
+    }
+}
