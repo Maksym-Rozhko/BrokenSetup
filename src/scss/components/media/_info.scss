@@ -1,0 +1,96 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-info {
+        h1 {
+            font-size: 70px;
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-info {
+        .section {
+            padding-block: 80px;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+        h2,
+        h3,
+        p {
+            font-size: 24px;
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-info {
+        .section {
+            padding-block: 70px;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+
+        h2,
+        h3,
+        p {
+            font-size: 20px;
+        }
+
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-info {
+        .section {
+            padding-block: 60px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2,
+        h3,
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-info {
+        h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        h2,
+        h3,
+        p {
+            font-size: 16px;
+        }
+
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
