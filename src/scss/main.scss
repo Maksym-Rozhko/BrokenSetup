@@ -24,6 +24,7 @@
 @use "./components/mt5-setup";
 @use "./components/forex-expo";
 @use "./components/psp-payment";
+@use "./components/company-formation";
 @use "./components/info";
 @use "./components/page-404";
 @use "./mixins/burger";
@@ -49,5 +50,6 @@
 @use "./components/media/mt5-setup" as mt5Setup2;
 @use "./components/media/forex-expo" as forexExpo2;
 @use "./components/media/psp-payment" as pspPayment2;
+@use "./components/media/company-formation" as companyFormation2;
 @use "./components/media/info" as info2;
 @use "./components/media/page-404" as page-4042;

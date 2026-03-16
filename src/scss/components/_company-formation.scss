@@ -1,0 +1,124 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-company-formation {
+    .main-screen {
+        background-image: url('../images/company-formation/main-screen/desktop.jpg');
+
+        .text {
+            max-width: 750px;
+        }
+    }
+
+    .design {
+        .content {
+            max-width: 740px;
+        }
+
+        img {
+            max-width: 788px;
+        }
+
+        &--list {
+            .content {
+                max-width: 680px;
+            }
+
+            &-bottom {
+                .design {
+                    &__container {
+                        gap: 88px;
+                    }
+                }
+                .content {
+                    max-width: 740px;
+                    margin-right: auto;
+                }
+
+                ul {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+
+    .benefits {
+        .section-title {
+            margin-block: 24px;
+        }
+
+        .section-text {
+            max-width: 990px;
+            margin-inline: auto;
+            margin-bottom: 50px;
+        }
+
+        &__container {
+            gap: 40px;
+        }
+    }
+
+    .what-we-do {
+        .section-label,
+        .section-title,
+        .section-text {
+            text-align: left;
+        }
+
+        &__container {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .content {
+            max-width: 535px;
+        }
+
+        &__list {
+            max-width: 902px;
+            gap: 46px 30px;
+        }
+
+        .item {
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        &__controls {
+            margin-top: 30px;
+            position: static;
+            display: block;
+            font-size: 24px;
+            line-height: 150%;
+            letter-spacing: -0.03em;
+            text-align: center;
+            font-weight: 700;
+            color: var(--cs-text-3);
+
+            .swiper-pagination-total {
+                font-weight: 400;
+                color: var(--cs-brand-main);
+            }
+        }
+    }
+
+    .ready-banner {
+        &--bottom {
+            .ready-banner {
+                &__container {
+                    padding-block: 90px;
+                }
+            }
+            .btn-main {
+                justify-content: space-between;
+                padding-left: 24px;
+
+                &:hover {
+                    background: var(--cs-white);
+                    color: var(--cs-brand-main);
+                }
+            }
+        }
+    }
+}

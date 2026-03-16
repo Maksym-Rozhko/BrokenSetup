@@ -1,0 +1,220 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-company-formation {
+
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-company-formation {
+        .main-screen {
+            background-image: url('../images/company-formation/main-screen/desktop.jpg');
+            background-position: 80%;
+        }
+
+        .benefits {
+            .section-title {
+                margin-block: 16px;
+            }
+
+            .section-text {
+                margin-bottom: 40px;
+            }
+
+            &__container {
+                gap: 16px;
+            }
+        }
+
+        .ready-banner {
+            &--bottom {
+                .ready-banner {
+                    &__container {
+                        padding-block: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-company-formation {
+        .benefits {
+            .section-text {
+                max-width: 700px;
+                margin-bottom: 24px;
+            }
+        }
+
+        .design {
+            &--list {
+                &-bottom {
+                    .design {
+                        &__container {
+                            gap: 44px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ready-banner {
+            &--bottom {
+                .ready-banner {
+                    &__container {
+                        padding-block: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-company-formation {
+        .main-screen {
+            background-position: 60%;
+        }
+
+
+        .ready-banner {
+            &--bottom {
+                p {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-company-formation {
+        .main-screen {
+            background-image: url('../images/company-formation/main-screen/mobile.jpg');
+            background-position: center;
+        }
+
+        .design {
+            &__container {
+                flex-direction: column-reverse;
+            }
+            .section-label,
+            .section-title,
+            .section-text {
+                text-align: center;
+            }
+
+            .btn-main {
+                margin-inline: auto;
+            }
+
+            &--list {
+                .section-label,
+                .section-text,
+                .section-title {
+                    text-align: left;
+                }
+
+                .design {
+                    &__container {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+
+        .benefits {
+            .section-text {
+                max-width: 600px;
+            }
+
+            &__container {
+                .item {
+                    p {
+                        min-height: 72px;
+                    }
+                }
+            }
+        }
+
+        .what-we-do {
+            .section-label,
+            .section-title,
+            .section-text {
+                text-align: center;
+            }
+
+            .section-text {
+                margin-bottom: 24px;
+            }
+
+            .content {
+                max-width: inherit;
+            }
+
+            .item {
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        .ready-banner {
+            &--bottom {
+                .title {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-company-formation {
+        .main-screen {
+            min-height: 620px;
+        }
+
+        .design {
+            img {
+                min-height: 290px;
+            }
+        }
+
+        .process {
+            .section-title {
+                br {
+                    display: none;
+                }
+            }
+
+            .item {
+                h3 {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .ready-banner {
+            &--bottom {
+                .ready-banner {
+                    &__container {
+                        padding-block: 60px;
+                    }
+                }
+
+                .title {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
