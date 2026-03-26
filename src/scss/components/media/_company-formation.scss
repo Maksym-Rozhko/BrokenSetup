@@ -1,12 +1,6 @@
 @use "../../mixins/breakpoint";
 @use "../../mixins/mini";
 
-@media (max-width: 1920px) {
-    .page-company-formation {
-
-    }
-}
-
 @include breakpoint.big-desktop {
     .page-company-formation {
         .main-screen {
