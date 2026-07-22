@@ -22,6 +22,26 @@
 }
 
 @include breakpoint.small-desktop {
+    .footer {
+        .nav {
+            ul {
+                li {
+                    &:not(:last-child) {
+                        padding-right: 24px;
+                        margin-right: 24px;
+                    }
+                    a {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            font-size: 18px;
+        }
+    }
+
     .scroll-top {
         bottom: 110px;
     }
@@ -30,22 +50,22 @@
 @include breakpoint.tablet {
     .footer {
         &__container {
+            flex-wrap: wrap;
             padding-block: 40px;
         }
         .nav {
+            margin-right: 0;
+
             ul {
                 li {
                     text-align: center;
-
-                    a {
-                        font-size: 21px;
-                    }
                 }
             }
         }
 
         .copyright {
-            font-size: 21px;
+            text-align: center;
+            margin-inline: auto;
             white-space: nowrap;
         }
     }
@@ -55,12 +75,39 @@
     .footer {
         &__container {
             flex-direction: column;
-            padding-bottom: 30px;
-            gap: 12px;
+            padding-top: 30px;
+            padding-bottom: 24px;
+            gap: 14px;
+        }
+
+        .socials {
+            margin-bottom: 10px;
+        }
+
+        .nav {
+            ul {
+                li {
+                    &:not(:last-child) {
+                        padding-right: 12px;
+                        margin-right: 12px;
+
+                        &::after {
+                            width: 1px;
+                            height: 10px;
+                        }
+                    }
+
+                    a {
+                        font-weight: 400;
+                        font-size: 12px;
+                    }
+                }
+            }
         }
 
         .copyright {
-            font-size: 18px;
+            font-weight: 400;
+            font-size: 12px;
         }
     }
 }

@@ -1,17 +1,24 @@
 @use "../mixins/mini";
 @use "../mixins/modal";
+@use "../mixins/content";
 
 .footer {
     background-color: var(--cs-bg-light-3);
 
     &__container {
         @include mini.flex-all-sb;
-        gap: 10px;
+        gap: 40px;
         padding-block: 53px;
         border-top: 2px solid rgba(90 104 129 / .2);
     }
 
+    .socials {
+        @include content.socials
+    }
+
     .nav {
+        margin-right: auto;
+
         ul {
             padding-left: 0;
             margin-top: 0;
@@ -23,8 +30,8 @@
                 position: relative;
 
                 &:not(:last-child) {
-                    padding-right: 36px;
-                    margin-right: 36px;
+                    padding-right: 32px;
+                    margin-right: 32px;
 
                     &::after {
                         content: "";
@@ -40,7 +47,7 @@
 
                 a {
                     font-weight: 600;
-                    font-size: 24px;
+                    font-size: 20px;
                     line-height: 150%;
                     letter-spacing: -0.02em;
                     color: var(--cs-terms-link);
@@ -56,7 +63,7 @@
 
     .copyright {
         font-weight: 500;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 150%;
         letter-spacing: -0.02em;
         color: var(--cs-text-4);
