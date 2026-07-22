@@ -4,6 +4,8 @@
 @media (max-width: 1920px) {
     .page-psp-payment {
         .main-screen {
+            background-position: center right 20%;
+
             &__container {
                 max-width: 600px;
             }
@@ -28,9 +30,10 @@
     .page-psp-payment {
         .main-screen {
             background-image: url('../images/psp-payment/main-screen/desktop.jpg');
+            background-position: center right 10%;
 
             &__container {
-                max-width: 500px;
+                max-width: 390px;
             }
         }
 
@@ -52,6 +55,9 @@
 
 @include breakpoint.small-desktop {
     .page-psp-payment {
+        .main-screen {
+            background-position: center right 20%;
+        }
         .what-we-do {
             .content {
                 max-width: 500px;
@@ -77,7 +83,29 @@
 @include breakpoint.tablet {
     .page-psp-payment {
         .main-screen {
-            min-height: 840px;
+            min-height: 1042px;
+            justify-content: flex-start;
+            text-align: center;
+            background-image: url('../images/psp-payment/main-screen/mobile.jpg');
+            background-position: center bottom 20%;
+            background-size: cover;
+            padding-block: 100px;
+
+            &__container {
+                max-width: inherit;
+            }
+
+            .title {
+                max-width: inherit;
+            }
+
+            .text {
+                max-width: inherit;
+            }
+
+            .btn-main {
+                margin-inline: auto;
+            }
         }
 
         .design {
@@ -101,29 +129,8 @@
 @include breakpoint.small-tablet {
     .page-psp-payment {
         .main-screen {
-            padding-block: 60px;
-            min-height: 710px;
-            justify-content: flex-start;
-            text-align: center;
-            background-image: url('../images/psp-payment/main-screen/mobile.jpg');
-            background-position: 50%;
-            background-size: cover;
-
-            &__container {
-                max-width: inherit;
-            }
-
-            .title {
-                max-width: inherit;
-            }
-
-            .text {
-                max-width: inherit;
-            }
-
-            .btn-main {
-                margin-inline: auto;
-            }
+            background-size: auto;
+            background-position: center bottom;
         }
 
         .design {
@@ -177,6 +184,9 @@
 @include breakpoint.mobile {
     .page-psp-payment {
         .main-screen {
+            padding-block: 60px;
+            min-height: 710px;
+            background-size: cover;
             background-position: center;
         }
 
