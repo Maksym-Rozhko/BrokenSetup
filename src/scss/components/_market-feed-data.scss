@@ -1,0 +1,143 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-market-feed-data {
+    .main-screen {
+        min-height: 1000px;
+        padding-block: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url('../images/market-feed-data/main-screen/desktop.jpg');
+        background-position: center right;
+        background-size: cover;
+
+        .title {
+            font-size: 60px;
+        }
+
+        .text {
+            max-width: 680px;
+        }
+    }
+
+    .design {
+        .content {
+            max-width: 705px;
+        }
+        img {
+            max-width: 768px;
+        }
+
+        &--list {
+            .design {
+                &__container {
+                    gap: 108px;
+                }
+            }
+
+            .content {
+                margin-right: auto;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+
+                li {
+                    @include mini.flex-v-center;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &-bottom {
+                .content {
+                    max-width: 788px;
+                }
+            }
+        }
+    }
+
+    .what-we-do {
+        .section-label,
+        .section-title,
+        .section-text {
+            text-align: center;
+        }
+
+        .section-text {
+            max-width: 930px;
+        }
+
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+
+        &__list {
+            max-width: inherit;
+            gap: 50px 1px;
+        }
+
+        .content {
+            max-width: inherit;
+        }
+
+        .item {
+            @include mini.flex-all-center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &-slider {
+            display: none;
+            margin-top: 24px;
+
+            &__controls {
+                margin-top: 30px;
+                position: static;
+                display: block;
+                font-size: 24px;
+                line-height: 150%;
+                letter-spacing: -0.03em;
+                text-align: center;
+                font-weight: 700;
+                color: var(--cs-text-3);
+
+                .swiper-pagination-total {
+                    font-weight: 400;
+                    color: var(--cs-brand-main);
+                }
+            }
+
+            .item {
+                min-width: inherit;
+            }
+        }
+    }
+
+    .process {
+        .design {
+            padding-block: 0;
+        }
+
+        &__container {
+            gap: 32px;
+        }
+    }
+
+    .ready-banner {
+        &--bottom {
+            .ready-banner {
+                &__container {
+                    padding-block: 90px;
+                }
+            }
+        }
+    }
+}
