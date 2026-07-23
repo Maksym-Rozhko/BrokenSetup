@@ -1,0 +1,139 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-copy-trading {
+    .main-screen {
+        min-height: 1000px;
+        padding-block: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url('../images/copy-trading/main-screen/desktop.jpg');
+        background-position: center right;
+        background-size: cover;
+
+        .text {
+            max-width: 703px;
+        }
+    }
+
+    .design {
+        .content {
+            max-width: 705px;
+        }
+        img {
+            max-width: 768px;
+        }
+
+        &--list {
+            .design {
+                &__container {
+                    gap: 108px;
+                }
+            }
+
+            .content {
+                max-width: inherit;
+                margin-right: auto;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+
+                li {
+                    @include mini.flex-v-center;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .challenges {
+        &--icons {
+            .section-text {
+                margin-bottom: 50px;
+            }
+
+            .btn-main {
+                @include content.btn-main;
+                max-width: 300px;
+            }
+
+            .challenges {
+                &__list {
+                    max-width: 840px;
+                }
+            }
+
+            .item {
+                padding-left: 0;
+                position: static;
+
+                &::before {
+                    content: none;
+                }
+
+                &__top {
+                    @include mini.flex-v-center;
+                    gap: 16px;
+                    margin-bottom: 24px;
+                }
+
+                h3 {
+                    font-size: 28px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .page-advisory-services {
+        .design {
+            &--list {
+                background-color: transparent;
+            }
+        }
+
+        .approach {
+            background-color: var(--cs-bg-light-3);
+
+            .section-text {
+                max-width: 700px;
+            }
+
+            .item {
+                h3,
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .process {
+        &__container {
+            margin-bottom: 0;
+        }
+
+        .item {
+            img {
+                max-width: 130px;
+            }
+        }
+    }
+
+    .ready-banner {
+        &--bottom {
+            .ready-banner {
+                &__container {
+                    padding-block: 90px;
+                }
+            }
+        }
+    }
+}
