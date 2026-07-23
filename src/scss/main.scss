@@ -28,6 +28,7 @@
 @use "./components/corporate-bank";
 @use "./components/market-feed-data";
 @use "./components/copy-trading";
+@use "./components/fix-api-bridge";
 @use "./components/info";
 @use "./components/page-404";
 @use "./mixins/burger";
@@ -57,5 +58,6 @@
 @use "./components/media/corporate-bank" as corporateBank2;
 @use "./components/media/market-feed-data" as marketFeedData2;
 @use "./components/media/copy-trading" as copyTrading2;
+@use "./components/media/fix-api-bridge" as fixApiBridge2;
 @use "./components/media/info" as info2;
 @use "./components/media/page-404" as page-4042;

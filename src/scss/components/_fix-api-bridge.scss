@@ -1,0 +1,128 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-fix-api-bridge {
+    .main-screen {
+        min-height: 1000px;
+        padding-block: 100px;
+        justify-content: flex-start;
+        background-image: url('../images/fix-api-bridge/main-screen/desktop.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &__container {
+            max-width: inherit;
+            text-align: center;
+        }
+
+        .text {
+            max-width: 860px;
+            margin-inline: auto;
+        }
+
+        .btn-main {
+            margin-inline: auto;
+        }
+    }
+
+    .design {
+        .content {
+            max-width: 705px;
+        }
+        img {
+            max-width: 768px;
+        }
+
+        &--list {
+            .design {
+                &__container {
+                    gap: 108px;
+                }
+            }
+
+            .content {
+                margin-right: auto;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+
+                li {
+                    @include mini.flex-v-center;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .challenges {
+        &--dots {
+            .challenges {
+                &__list {
+                    max-width: 840px;
+                }
+            }
+        }
+        .content {
+            max-width: 600px;
+        }
+
+        .item {
+            padding-left: 26px;
+
+            &::before {
+                top: 14px;
+                width: 10px;
+                height: 10px;
+            }
+
+            h3 {
+                font-size: 28px;
+                margin-bottom: 24px;
+            }
+
+            p {
+                margin-left: -26px;
+            }
+        }
+    }
+
+    .page-advisory-services {
+        .approach {
+            .item {
+                h3,
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .process {
+        .section-title {
+            br {
+                display: none;
+            }
+        }
+
+        &__container {
+            gap: 47px;
+        }
+    }
+
+    .ready-banner {
+        &--bottom {
+            .ready-banner {
+                &__container {
+                    padding-block: 90px;
+                }
+            }
+        }
+    }
+}

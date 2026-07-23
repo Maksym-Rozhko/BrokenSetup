@@ -1,0 +1,244 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-fix-api-bridge {
+        .main-screen {
+            background-position: center;
+
+            &__container {
+                max-width: inherit;
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-fix-api-bridge {
+        .main-screen {
+            background-image: url('../images/fix-api-bridge/main-screen/desktop.jpg');
+            background-position: center;
+        }
+
+        .design {
+            .content {
+                max-width: 550px;
+            }
+        }
+
+        .challenges {
+            .item {
+                padding-left: 26px;
+
+                &::before {
+                    top: 14px;
+                    width: 10px;
+                    height: 10px;
+                }
+
+                h3 {
+                    font-size: 24px;
+                    margin-bottom: 18px;
+                }
+
+                p {
+                    margin-left: -26px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-fix-api-bridge {
+        .main-screen {
+            background-position: center;
+        }
+
+        .design {
+            &--list {
+                .design {
+                    &__container {
+                        gap: 40px;
+                    }
+                }
+
+                ul {
+                    gap: 20px;
+
+                    li {
+                        &:not(:last-child) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .challenges {
+            .item {
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-fix-api-bridge {
+        .main-screen {
+            min-height: 842px;
+            justify-content: flex-start;
+            text-align: center;
+            background-image: url('../images/fix-api-bridge/main-screen/mobile.jpg');
+            background-position: center bottom;
+            background-size: cover;
+            padding-block: 100px;
+
+            &__container {
+                max-width: inherit;
+            }
+
+            .title {
+                max-width: inherit;
+            }
+
+            .text {
+                max-width: inherit;
+            }
+
+            .btn-main {
+                margin-inline: auto;
+            }
+        }
+
+        .design {
+            &--list {
+                ul {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+        .challenges {
+            .item {
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-fix-api-bridge {
+        .main-screen {
+            min-height: 700px;
+            background-size: cover;
+            background-position: center bottom;
+        }
+
+        .design {
+            .content {
+                max-width: inherit;
+            }
+
+            .section-text {
+                margin-bottom: 0;
+            }
+
+            &--list {
+                .section-title {
+                    br {
+                        display: block;
+                    }
+                }
+
+                .design {
+                    &__container {
+                        gap: 24px;
+                    }
+                }
+            }
+        }
+
+        .challenges {
+            .item {
+                p {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-fix-api-bridge {
+        .main-screen {
+            padding-block: 60px;
+            min-height: 590px;
+            background-size: cover;
+            background-position: center bottom;
+        }
+
+        .design {
+            .section-text {
+                margin-bottom: 0;
+            }
+
+            img {
+                min-height: 290px;
+                border-radius: 12px;
+            }
+
+
+            &--list {
+                ul {
+                    margin-top: 24px;
+                }
+            }
+        }
+
+        .process {
+            .section-title {
+                br {
+                    display: block;
+                }
+            }
+            .item {
+                span {
+                    width: 60px;
+                    height: 60px;
+                    font-size: 18px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .ready-banner {
+            &--bottom {
+                .ready-banner {
+                    &__container {
+                        padding-block: 72px;
+                    }
+                }
+            }
+        }
+    }
+}
