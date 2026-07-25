@@ -1,0 +1,222 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-liquidity-setup {
+    .main-screen {
+        min-height: 1000px;
+        padding-block: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-image: url('../images/liquidity-setup/main-screen/desktop.jpg');
+        background-position: center;
+        background-size: cover;
+
+        .text {
+            max-width: 1020px;
+        }
+    }
+
+    .design {
+        .content {
+            max-width: 705px;
+        }
+        img {
+            max-width: 768px;
+        }
+
+        &--list {
+            .design {
+                &__container {
+                    gap: 108px;
+                }
+            }
+
+            .content {
+                margin-right: auto;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+
+                li {
+                    @include mini.flex-v-center;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &-bottom {
+                .content {
+                    max-width: 788px;
+                }
+            }
+        }
+    }
+
+    .challenges {
+        .item {
+            &::before {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        &--icons {
+            .section-text {
+                margin-bottom: 50px;
+            }
+
+            .challenges {
+                &__list {
+                    max-width: 840px;
+                }
+            }
+
+            .item {
+                padding-left: 0;
+                position: static;
+
+                &::before {
+                    content: none;
+                }
+
+                &__top {
+                    @include mini.flex-v-center;
+                    gap: 16px;
+                    margin-bottom: 24px;
+                }
+
+                h3 {
+                    font-size: 28px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .what-we-do {
+        .section-label,
+        .section-title,
+        .section-text {
+            text-align: center;
+        }
+
+        .section-text {
+            max-width: 930px;
+        }
+
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+
+        &__list {
+            max-width: inherit;
+            gap: 50px 1px;
+        }
+
+        .content {
+            max-width: inherit;
+        }
+
+        .item {
+            @include mini.flex-all-center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .picture {
+            img {
+                border-radius: 24px;
+                min-height: 224px;
+            }
+        }
+
+        &-slider {
+            display: none;
+            margin-top: 24px;
+
+            &__controls {
+                margin-top: 30px;
+                position: static;
+                display: block;
+                font-size: 24px;
+                line-height: 150%;
+                letter-spacing: -0.03em;
+                text-align: center;
+                font-weight: 700;
+                color: var(--cs-text-3);
+
+                .swiper-pagination-total {
+                    font-weight: 400;
+                    color: var(--cs-brand-main);
+                }
+            }
+
+            .item {
+                min-width: inherit;
+            }
+        }
+    }
+
+    .customization {
+        .item {
+            p {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 150%;
+                letter-spacing: -0.02em;
+                color: var(--cs-text-4);
+                margin-top: 0;
+                margin-bottom: 24px;
+            }
+        }
+
+        &__container,
+        &-slider {
+            margin-bottom: 50px;
+        }
+
+        .btn-main {
+            @include content.btn-main;
+            margin-inline: auto;
+            max-width: 280px;
+        }
+    }
+
+    .ready-section {
+        background-color: transparent;
+
+        .btn-main {
+            @include content.btn-icon;
+
+            background: linear-gradient(135deg, #9278ff 8.58%, #4b28b1 91.42%);
+            color: var(--cs-white);
+
+            .icon {
+                background: var(--cs-white);
+
+                img {
+                    filter: invert(1);
+                }
+            }
+
+            &:hover {
+                background: linear-gradient(135deg, #7156e1 0%, #281461 100%);
+                color: var(--cs-white);
+
+                .icon {
+                    img {
+                        filter: invert(0);
+                    }
+                }
+            }
+        }
+    }
+}
