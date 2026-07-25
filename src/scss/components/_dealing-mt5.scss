@@ -1,0 +1,154 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-dealing-mt5 {
+    .main-screen {
+        min-height: 1000px;
+        padding-block: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: none;
+        text-align: left;
+        background-color: var(--cs-bg-light-3);
+
+        &::after {
+            height: 300px;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: inherit;
+            margin-bottom: 100px;
+        }
+
+        .content {
+            max-width: 757px;
+            width: 100%;
+        }
+
+        .text {
+            max-width: inherit;
+            margin-top: 0;
+        }
+
+        img {
+            max-height: 760px;
+        }
+
+        .btn-main {
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .design {
+        .content {
+            max-width: 705px;
+        }
+        img {
+            max-width: 768px;
+        }
+
+        &--list {
+            .design {
+                &__container {
+                    gap: 108px;
+                }
+            }
+
+            .content {
+                margin-right: auto;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+
+                li {
+                    @include mini.flex-v-center;
+
+                    &:not(:last-child) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .approach {
+        background-color: var(--cs-bg-light-3);
+
+        .item {
+            text-align: center;
+        }
+    }
+
+    .work {
+        background-color: transparent;
+        padding-bottom: 0;
+        overflow: hidden;
+
+        &__container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px 158px;
+            justify-content: space-between;
+            margin-bottom: 100px;
+        }
+
+        .item {
+            padding-left: 58px;
+
+            h3 {
+                font-weight: 400;
+                font-size: 24px;
+                margin-bottom: 0;
+            }
+        }
+
+        .image-wrapper {
+            position: relative;
+            margin-bottom: -14px;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 84px;
+                bottom: 0;
+                left: 93px;
+                right: 0;
+                background: linear-gradient(360deg, #d9d9d9 0%, rgba(244, 244, 245, 0) 100%);
+            }
+
+            img {
+                max-height: 685px;
+            }
+        }
+    }
+
+    .process {
+        .design {
+            padding-block: 0;
+        }
+
+        &__container {
+            gap: 32px;
+            margin-bottom: 0;
+        }
+    }
+
+    .ready-banner {
+        &--bottom {
+            .ready-banner {
+                &__container {
+                    padding-block: 90px;
+                }
+            }
+        }
+    }
+}
