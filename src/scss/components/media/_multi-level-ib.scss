@@ -1,0 +1,339 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-multi-level-ib {
+        .main-screen {
+            background-position: center;
+
+            &__container {
+                gap: 40px;
+                max-width: inherit;
+            }
+        }
+
+        .what-we-do {
+            .content {
+                max-width: inherit;
+            }
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-multi-level-ib {
+        .main-screen {
+            background-image: url('../images/multi-level-ib/main-screen/desktop.jpg');
+            background-position: center;
+
+            .text {
+                margin-top: 0;
+            }
+        }
+
+        .design {
+            .content {
+                max-width: 550px;
+            }
+        }
+
+        .challenges {
+            .item {
+                padding-left: 26px;
+
+                &::before {
+                    top: 10px;
+                    width: 10px;
+                    height: 10px;
+                }
+
+                h3 {
+                    font-size: 24px;
+                    margin-bottom: 18px;
+                }
+
+                p {
+                    margin-left: -26px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-multi-level-ib {
+        .main-screen {
+            background-position: center;
+
+            .text {
+                max-width: 600px;
+            }
+        }
+        .what-we-do {
+            .content {
+                max-width: inherit;
+            }
+        }
+
+        .design {
+            &--list {
+                .design {
+                    &__container {
+                        gap: 40px;
+                    }
+                }
+
+                ul {
+                    gap: 20px;
+
+                    li {
+                        &:not(:last-child) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .challenges {
+            .item {
+                &::before {
+                    top: 8px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-multi-level-ib {
+        .main-screen {
+            min-height: 1042px;
+            justify-content: flex-start;
+            text-align: left;
+            background-image: url('../images/multi-level-ib/main-screen/desktop.jpg');
+            background-position: center;
+            background-size: cover;
+            padding-block: 100px;
+
+            &__container {
+                max-width: inherit;
+                gap: 20px;
+            }
+
+            .title {
+                max-width: inherit;
+            }
+
+            .text {
+                max-width: 400px;
+            }
+
+            .btn-main {
+                margin-left: 0;
+            }
+        }
+
+        .design {
+            &--list {
+                ul {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+        .challenges {
+            .item {
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-multi-level-ib {
+        .main-screen {
+            background-image: url('../images/multi-level-ib/main-screen/mobile.jpg');
+            background-size: cover;
+            background-position: center bottom;
+            text-align: center;
+
+            &__container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .text {
+                max-width: inherit;
+
+                br {
+                    display: none;
+                }
+            }
+
+            .btn-main {
+                margin-left: auto;
+            }
+        }
+
+        .design {
+            .content {
+                max-width: inherit;
+            }
+
+            .section-text {
+                margin-bottom: 0;
+            }
+
+            &--list {
+                .section-title {
+                    br {
+                        display: block;
+                    }
+                }
+
+                .design {
+                    &__container {
+                        gap: 24px;
+                    }
+                }
+            }
+        }
+
+        .challenges {
+            .item {
+                p {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .what-we-do {
+            img {
+                border-radius: 12px;
+            }
+
+            .section-text {
+                margin-bottom: 20px;
+            }
+
+            &__list {
+                display: none;
+            }
+
+            &-slider {
+                display: block;
+            }
+
+            .content {
+                max-width: inherit;
+            }
+
+            .item {
+                min-width: inherit;
+            }
+        }
+
+        .process {
+            .design {
+                .btn-main {
+                    display: flex;
+                    margin-inline: auto;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-multi-level-ib {
+        .main-screen {
+            padding-block: 60px;
+            min-height: 640px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .what-we-do {
+            .content {
+                max-width: 350px;
+            }
+        }
+
+        .design {
+            .section-text {
+                margin-bottom: 0;
+            }
+
+            img {
+                min-height: 290px;
+                border-radius: 12px;
+            }
+
+
+            &--list {
+                ul {
+                    margin-top: 24px;
+                }
+            }
+        }
+
+        .process {
+            .item {
+                span {
+                    width: 60px;
+                    height: 60px;
+                    font-size: 18px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .design {
+                &--list {
+                    .ready-banner {
+                        &__container {
+                            padding-block: 30px;
+                        }
+                    }
+                }
+            }
+            &--bottom {
+                .section-title {
+                    max-width: 360px;
+                    margin-inline: auto;
+                }
+            }
+        }
+
+        .ready-banner {
+            &--bottom {
+                .ready-banner {
+                    &__container {
+                        padding-block: 72px;
+                    }
+                }
+            }
+        }
+    }
+}
