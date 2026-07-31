@@ -217,12 +217,18 @@
             }
 
             .image-wrapper {
+                    overflow-x: auto;
+                    margin-right: -15px;
+                    padding-right: 15px;
+
                 &::after {
                     background: linear-gradient(360deg, #d9d9d9 0%, rgba(244, 244, 245, 0) 100%);
                     left: 54px;
+                    min-width: 745px;
                 }
                 img {
                     min-height: 341px;
+                    min-width: 800px;
                 }
             }
         }
@@ -269,7 +275,8 @@
         .work {
             .image-wrapper {
                 &::after {
-                    left: 40px;
+                    left: 46px;
+                    min-width: 754px;
                 }
             }
         }
@@ -281,7 +288,8 @@
         .work {
             .image-wrapper {
                 &::after {
-                    left: 25px;
+                    left: 44px;
+                    min-width: 755px;
                 }
             }
         }
