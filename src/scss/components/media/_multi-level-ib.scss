@@ -245,6 +245,12 @@
 
             .item {
                 min-width: inherit;
+
+                .icon {
+                    img {
+                        border-radius: 0;
+                    }
+                }
             }
         }
 
