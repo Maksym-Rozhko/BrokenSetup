@@ -32,6 +32,7 @@
 @use "./components/multi-level-ib";
 @use "./components/dealing-mt5";
 @use "./components/liquidity-setup";
+@use "./components/bookkeeping";
 @use "./components/info";
 @use "./components/page-404";
 @use "./mixins/burger";
@@ -65,5 +66,6 @@
 @use "./components/media/multi-level-ib" as multiLevelIb2;
 @use "./components/media/dealing-mt5" as dealingMt52;
 @use "./components/media/liquidity-setup" as liquiditySetup2;
+@use "./components/media/bookkeeping" as bookkeeping2;
 @use "./components/media/info" as info2;
 @use "./components/media/page-404" as page-4042;

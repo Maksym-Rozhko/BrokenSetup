@@ -1,0 +1,107 @@
+@use "../mixins/mini";
+@use "../mixins/content";
+
+.page-bookkeeping {
+    .main-screen {
+        background-image: url('../images/bookkeeping/main-screen/desktop.png');
+        background-size: contain;
+        background-position: center right 20%;
+
+        .title {
+            font-size: 60px;
+        }
+
+        .text {
+            max-width: 570px;
+        }
+    }
+
+    .design {
+        background-color: var(--cs-bg-light-3);
+    }
+
+    .challenges {
+        background-color: transparent;
+
+        &--dots-accent {
+            background-color: var(--cs-bg-light-3);
+        }
+    }
+
+    .work {
+        background-color: var(--cs-bg-light-3);
+
+        .section-title {
+            max-width: inherit;
+        }
+
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 300px;
+        }
+
+        .item {
+            h3 {
+                font-size: 28px;
+                font-weight: 700;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 150%;
+                letter-spacing: -0.02em;
+                color: var(--cs-text-4);
+                margin-top: 18px;
+                margin-bottom: 0;
+            }
+        }
+
+        .image-wrapper {
+            img {
+                border-radius: 0;
+            }
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    .process {
+        background-color: transparent;
+
+        &__container {
+            margin-bottom: 50px;
+        }
+
+        .btn-main {
+            max-width: 300px;
+        }
+    }
+
+    .benefits {
+        padding-bottom: 0;
+
+        &__container {
+            .item {
+                .icon {
+                    width: 80px;
+                    height: 80px;
+                    background: var(--cs-brand-4);
+                    border-radius: 50%;
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .ready-banner {
+        &--bottom {
+            p {
+                color: #c7bdf0;
+            }
+        }
+    }
+}

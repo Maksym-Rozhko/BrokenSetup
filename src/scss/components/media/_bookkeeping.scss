@@ -1,0 +1,119 @@
+@use "../../mixins/breakpoint";
+@use "../../mixins/mini";
+
+@media (max-width: 1920px) {
+    .page-bookkeeping {
+        .main-screen {
+            background-size: 800px;
+            background-position: center right 10%;
+        }
+
+        .work {
+            background-color: var(--cs-bg-light-3);
+
+            .section-title {
+                max-width: inherit;
+            }
+        }
+
+        .benefits {
+            padding-bottom: 0;
+        }
+    }
+}
+
+@include breakpoint.big-desktop {
+    .page-bookkeeping {
+        .main-screen {
+            background-size: 600px;
+            background-image: url('../images/bookkeeping/main-screen/desktop.png');
+        }
+
+        .benefits {
+            &__container {
+                .item {
+                    .icon {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint.small-desktop {
+    .page-bookkeeping {
+        .main-screen {
+            background-size: 500px;
+        }
+    }
+}
+
+@include breakpoint.tablet {
+    .page-bookkeeping {
+        .main-screen {
+            background-size: 600px;
+            background-position: center bottom;
+        }
+    }
+}
+
+@include breakpoint.small-tablet {
+    .page-bookkeeping {
+        .main-screen {
+            background-size: 500px;
+            min-height: 920px;
+        }
+
+        .design {
+            img {
+                display: block;
+            }
+        }
+
+        .work {
+            .item {
+                p {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .process {
+            &-slider {
+                margin-bottom: 24px;
+            }
+
+            .btn-main {
+                display: flex;
+            }
+        }
+    }
+}
+
+@include breakpoint.mobile {
+    .page-bookkeeping {
+        .main-screen {
+            background-size: cover;
+            background-image: url('../images/bookkeeping/main-screen/mobile.jpg');
+            min-height: 720px;
+        }
+
+        .challenges {
+            .section-title {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .work {
+            .image-wrapper {
+                img {
+                    min-height: 300px;
+                }
+            }
+        }
+    }
+}
